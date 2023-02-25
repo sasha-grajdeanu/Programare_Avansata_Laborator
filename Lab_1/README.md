@@ -6,6 +6,7 @@ Fisierele se regasesc in directorul src.
 
 S-au rezolvat toate cerintele date. 
 Pentru calculul sumei unui numar, s-a creat o functie compute ce va returna un int.
+
 Mod de functionare:
 1. Cat timp numarul dat ca parametru are mai mult de 2 cifre, adunam intr-o variabila result ultima cifra din numar, apoi impartim numarul la 10.
 2. Dupa iesirea din bucla while, se returneaza variabila result.
@@ -22,9 +23,13 @@ In main, s-au realizat urmatoarele:
 ## Homework
 
 S-au realizat toate cerintele date.
+
 S-a creat o functie printMatrix, cu rolul de a rezolva cerinta nr. 3
+
 Aceasta functie primeste ca parametrii un "Latin Square" de tip int, o valoare booleana sense (pentru a stii daca vrem sa afisam in functie de linii sau in functie de coloane), si numarul de linii si coloane.
+
 Parcurgem matricea prin 2 for-uri.  In cadrul primului for, se creeaza un StringBuffer (alegere facuta pentru a adauga in acesta elementele de pe linia/coloana matricei date). In al doilea for, verificam daca variabila sense este true (vrem crearea si afisarea string-urilor pe linii), caz in care adaugam in string elementul de pe linia i, coloana j, alftel (vrem crearea si afisarea string-urilor pe coloane), caz in care adaugam in string elementul de pe linia j coloana i. Apoi inseram un space pentru a fi lizibil.
+
 Daca n-ul dat argument este mai mic sau egal cu 30_000, atunci afisam stringul (valoare luata din ceritna nr. 4).
 
 In main s-au realizat urmatoarele:
