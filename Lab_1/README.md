@@ -9,7 +9,9 @@ Pentru calculul sumei unui numar, s-a creat o functie compute ce va returna un i
 Mod de functionare:
 1. Cat timp numarul dat ca parametru are mai mult de 2 cifre, adunam intr-o variabila result ultima cifra din numar, apoi impartim numarul la 10.
 2. Dupa iesirea din bucla while, se returneaza variabila result.
+
 In main, s-au realizat urmatoarele:
+
 1. Afisarea pe ecran a mesajului "Hello world" (linia 22);
 2. Definirea unui vector de stringuri, ce contine numele unor limbaje de programare (linia 23);
 3. Generarea unui numar aleator (linia 24)
