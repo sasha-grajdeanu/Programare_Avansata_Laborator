@@ -1,4 +1,4 @@
-public class Helloworld {
+public class Compulsory {
     /**
      * Aici avem clasa
      * Avem functia compute ce va realiza suma cifrelor dintr-un numar dat ca parametru
