@@ -38,4 +38,4 @@ In main s-au realizat urmatoarele:
 3. Afisarea numerelor din matrice pe linii si pe coloane (liniile 46-48) *la linia 47 am afisat un mic mesaj pentru a realiza o separare intre comenzi*. Mentionez ca, daca n>30_000, nu se va afisa numerele, dar se va executa functia apelata, cu scopul de a determina timpul de rulare;
 4. Afisarea timpului de executie in milisecunde (linia 35, 50 si 51). La linia 35 am extras timpul la care a inceput executia, la linia 50 timpul la care s-a terminat executia, si la 51 afisam diferenta dintre ele (adica timpul de executie).
 
-Pentru cerinta nr. 5 s-a anexat o captura de ecran.
+Pentru cerinta nr. 5, s-a anexat o captura de ecran.
