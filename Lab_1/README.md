@@ -2,6 +2,8 @@
 
 Fisierele se regasesc in directorul src. 
 
+S-a folosit Java SE 19.
+
 ## Compulsory
 
 S-au rezolvat toate cerintele date. 
