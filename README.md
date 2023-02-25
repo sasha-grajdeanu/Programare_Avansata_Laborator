@@ -2,6 +2,6 @@
 
 Activitatea la laborator+teme
 
-##Laboratorul nr.1
+## Laboratorul nr.1
 
 Pus pe GitHub partea de COMPULSORY si HOMEWORK
