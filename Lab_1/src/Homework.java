@@ -1,8 +1,11 @@
 public class Homework {
-
     /**
-     * functie de afisare a liniilor sau a coloanelor ca string-uri (in functie de valaorea booleana
-     * din sense) intr-o matrice data ca parametru
+     * @author Grăjdeanu Alexandru-Cristian
+     */
+    /**
+     * Functia printMatrix este o functie de afisare
+     * a liniilor sau a coloanelor ca string-uri (in functie de
+     * valoarea booleana din sense) dintr-o matrice data ca parametru.
      * prin aceasta functie rezolvam cerinta nr. 3
      */
     public static void printMatrix(int[][] latinMatrix, boolean sense, int n) {

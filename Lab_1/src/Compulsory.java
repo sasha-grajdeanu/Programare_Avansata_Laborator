@@ -1,8 +1,12 @@
 public class Compulsory {
+
     /**
-     * Aici avem clasa
-     * Avem functia compute ce va realiza suma cifrelor dintr-un numar dat ca parametru
-     * Apoi in main rezolvam cerintele date.
+     * @author Grăjdeanu Alexandru-Cristian
+     */
+
+    /**
+     * Avem functia compute ce va realiza suma cifrelor dintr-un numar dat ca parametru.
+     * Aceasta functie este necesara pentru rezolvarea cerintelor.
      */
     public static int compute(int number) {
         int auxiliar = number;
