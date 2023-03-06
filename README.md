@@ -14,9 +14,6 @@ Pus pe Github partea de COMPULSORY si HOMEWORK
 
 - Create an object-oriented model of the problem. You should have (at least) the following classes: Location, Road.
 The location and road types will be implemented as enums. (*solved*)
-
--Each class should have appropriate constructors, getters and setters.(*solved*)
-
--The toString method form the Object class must be properly overridden for all the classes.(*solved*)
-
--Create and print on the screen various objects of the two classes.(*solved*)
+- Each class should have appropriate constructors, getters and setters.(*solved*)
+- The toString method form the Object class must be properly overridden for all the classes.(*solved*)
+- Create and print on the screen various objects of the two classes.(*solved*)
