@@ -2,7 +2,6 @@ package Homework;
 
 
 /**
- * @author Grajdeanu Alexandru-Cristian
  * This class models a location with a name and some coordinates.
  */
 public class Location {

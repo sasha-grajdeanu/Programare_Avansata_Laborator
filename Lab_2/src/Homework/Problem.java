@@ -106,7 +106,7 @@ public class Problem {
      *
      * @param loc1 location 1
      * @param loc2 location 2
-     * @return true, if exist roads between loc1 and loc2
+     * @return true, if exists roads between loc1 and loc2
      */
     public boolean existRoadsBetween(Location loc1, Location loc2) {
         if(isValidInput()==false)

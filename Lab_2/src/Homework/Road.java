@@ -3,7 +3,6 @@ package Homework;
 import java.util.Objects;
 
 /**
- * @author Grajdeanu Alexandru-Cristian
  * This class models a road with two location, the length and the speed.
  */
 public class Road {
@@ -20,10 +19,11 @@ public class Road {
 
     /**
      * all-args constructor
-     * @param start start location
+     *
+     * @param start  start location
      * @param finish final location
      * @param length the length
-     * @param speed the speed
+     * @param speed  the speed
      */
     public Road(Location start, Location finish, int length, int speed) {
         this.start = start;
@@ -34,6 +34,7 @@ public class Road {
 
     /**
      * getter for the start location
+     *
      * @return start location
      */
     public Location getStart() {
@@ -42,6 +43,7 @@ public class Road {
 
     /**
      * getter for the speed
+     *
      * @return the speed
      */
     public int getSpeed() {
@@ -50,6 +52,7 @@ public class Road {
 
     /**
      * getter for the final location
+     *
      * @return final location
      */
     public Location getFinish() {
@@ -58,6 +61,7 @@ public class Road {
 
     /**
      * getter for the length
+     *
      * @return the length
      */
     public int getLength() {
@@ -66,6 +70,7 @@ public class Road {
 
     /**
      * setter for the start location
+     *
      * @param start start location
      */
     public void setStart(Location start) {
@@ -74,6 +79,7 @@ public class Road {
 
     /**
      * setter for the speed of road
+     *
      * @param speed the speed of road
      */
     public void setSpeed(int speed) {
@@ -82,6 +88,7 @@ public class Road {
 
     /**
      * setter for the length of road
+     *
      * @param length the length of road
      */
     public void setLength(int length) {
@@ -90,6 +97,7 @@ public class Road {
 
     /**
      * setter for the finish location
+     *
      * @param finish finish location
      */
     public void setFinish(Location finish) {
@@ -98,6 +106,7 @@ public class Road {
 
     /**
      * overriding method toString()
+     *
      * @return a string who represent a described for the road
      */
     @Override
@@ -107,6 +116,7 @@ public class Road {
 
     /**
      * overriding method equals()
+     *
      * @param o an object with which we will compare our class
      * @return true/false
      */
