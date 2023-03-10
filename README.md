@@ -12,7 +12,7 @@ Pus pe GitHub partea de COMPULSORY si HOMEWORK
 
 Pus pe Github partea de COMPULSORY si HOMEWORK
 
-###COMPULSORY (*solved*)
+### COMPULSORY (*solved*)
 
 - Create an object-oriented model of the problem. You should have (at least) the following classes: Location, Road.
 The location and road types will be implemented as enums. (*solved*)
@@ -20,7 +20,7 @@ The location and road types will be implemented as enums. (*solved*)
 - The toString method form the Object class must be properly overridden for all the classes. (*solved*)
 - Create and print on the screen various objects of the two classes. (*solved*)
 
-###HOMEWORK
+### HOMEWORK
 
 - Create a class that describes an instance of the problem. (*solved*)
 - Override the Object.equals method for the Location and Road classes. The problem should not allow adding the same location or road twice. (*solved*)
