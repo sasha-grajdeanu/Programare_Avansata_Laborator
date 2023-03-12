@@ -10,7 +10,7 @@ public class Country extends Road {
     private String condition;
 
     /**
-     * all-args constructor for the class Country
+     * all-args constructor
      *
      * @param start     start location
      * @param finish    final location

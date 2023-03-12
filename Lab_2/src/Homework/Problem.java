@@ -102,15 +102,14 @@ public class Problem {
     }
 
     /**
-     * the mtehod where we check if exist roads between 2 location
+     * the method where we check if exist roads between 2 location
      *
      * @param loc1 location 1
      * @param loc2 location 2
      * @return true, if exists roads between loc1 and loc2
      */
     public boolean existRoadsBetween(Location loc1, Location loc2) {
-        if(isValidInput()==false)
-        {
+        if (isValidInput() == false) {
             return false;
         }
         boolean[] marked = new boolean[this.location.length];

@@ -1,6 +1,5 @@
 package Compulsory.describeMembers;
 
-
 /**
  * This class represent a person.
  *
