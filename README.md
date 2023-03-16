@@ -45,3 +45,13 @@ The location and road types will be implemented as enums. (*solved*)
 - Create the Network class containing a List of identifiable nodes. (*solved*)
 - Create a method that computes the importance of a node in the network, as the number of its connections to other nodes. (*solved*)
 - Create a network object containing persons, companies and relationships and print it on the screen. When printing the network, the nodes must be ordered according to their importance. (*solved*)
+
+## Laboratorul nr. 4
+
+### Compulsory
+
+- Create a Maven project. (*solved*)
+- Create an object-oriented model of the problem. Students and projects have names. Make sure the objects of these classes are comparable. (*solved*)
+- Create the students and the projects described in the example. Use streams in order to easily create the objects. (*solved*)
+- Put all the students in a LinkedList and print them sorted by their names. (*solved*)
+- Put all the projects in a TreeSet and print them sorted by their names. (*solved*)
