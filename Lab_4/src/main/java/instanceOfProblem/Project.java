@@ -1,5 +1,7 @@
 package instanceOfProblem;
 
+import java.util.Objects;
+
 /**
  * this class is a representation for the project
  * <p>
@@ -56,5 +58,18 @@ public class Project implements Comparable<Project> {
     @Override
     public int compareTo(Project o) {
         return this.name.compareTo(o.getName());
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Project project = (Project) o;
+        return Objects.equals(name, project.name);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name);
     }
 }

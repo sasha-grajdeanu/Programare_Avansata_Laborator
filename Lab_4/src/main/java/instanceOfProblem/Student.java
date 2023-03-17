@@ -1,5 +1,7 @@
 package instanceOfProblem;
 
+import java.util.Objects;
+
 /**
  * this class is a representation for the student
  * <p>
@@ -56,5 +58,18 @@ public class Student implements Comparable<Student> {
     @Override
     public int compareTo(Student o) {
         return this.name.compareTo(o.getName());
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Student student = (Student) o;
+        return Objects.equals(name, student.name);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name);
     }
 }
