@@ -60,6 +60,11 @@ public class Project implements Comparable<Project> {
         return this.name.compareTo(o.getName());
     }
 
+    /**
+     * overriding method equals
+     * @param o an object
+     * @return true/false
+     */
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -68,6 +73,11 @@ public class Project implements Comparable<Project> {
         return Objects.equals(name, project.name);
     }
 
+    /**
+     * overriding method hashCode
+     *
+     * @return an integer represent the hashcode
+     */
     @Override
     public int hashCode() {
         return Objects.hash(name);

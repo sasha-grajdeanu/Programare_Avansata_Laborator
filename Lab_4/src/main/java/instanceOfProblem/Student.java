@@ -60,6 +60,11 @@ public class Student implements Comparable<Student> {
         return this.name.compareTo(o.getName());
     }
 
+    /**
+     * overriding method equals
+     * @param o an object
+     * @return true/false
+     */
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -68,6 +73,11 @@ public class Student implements Comparable<Student> {
         return Objects.equals(name, student.name);
     }
 
+    /**
+     * overriding method hashCode
+     *
+     * @return an integer represent the hashcode
+     */
     @Override
     public int hashCode() {
         return Objects.hash(name);
