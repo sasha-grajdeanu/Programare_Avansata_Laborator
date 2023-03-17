@@ -1,6 +1,7 @@
 package Homework.members;
 
 import java.time.LocalDate;
+import java.util.Objects;
 
 /**
  * this class is an extension of the class person and represent a designer
@@ -29,5 +30,19 @@ public class Designer extends Person {
 
     public void setStyle(String style) {
         this.style = style;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        if (!super.equals(o)) return false;
+        Designer designer = (Designer) o;
+        return Objects.equals(style, designer.style);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(super.hashCode(), style);
     }
 }

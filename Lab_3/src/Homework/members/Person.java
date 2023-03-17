@@ -3,6 +3,7 @@ package Homework.members;
 import java.time.LocalDate;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Objects;
 
 /**
  * this class represent a person
@@ -63,6 +64,19 @@ public class Person implements Comparable<Person>, Node {
     @Override
     public String getName() {
         return this.nameOfPerson;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Person person = (Person) o;
+        return Objects.equals(nameOfPerson, person.nameOfPerson) && Objects.equals(birthDate, person.birthDate) && Objects.equals(relationships, person.relationships);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(nameOfPerson, birthDate, relationships);
     }
 
     @Override
