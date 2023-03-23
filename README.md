@@ -55,3 +55,21 @@ The location and road types will be implemented as enums. (*solved*)
 - Create the students and the projects described in the example. Use streams in order to easily create the objects. (*solved*)
 - Put all the students in a LinkedList and print them sorted by their names. (*solved*)
 - Put all the projects in a TreeSet and print them sorted by their names. (*solved*)
+
+### Homework
+
+- Create a class that describes the problem. (*solved*)
+- Using Java Stream API, write a query that display all the students that have a number of preferences lower than the average number of preferences. (*solved*)
+- Use a third-party library in order to generate random fake names for students and projects. (*solved*)
+- Create a Greedy algorithm in order to solve the problem. (*solved*)
+
+## Laboratorul nr. 5
+
+###Compulsory
+
+- Create an object-oriented model of the problem. You should have at least the following classes: Catalog, Document. Create a class responsible with external operations regarding a catalog. (*solved*)
+- Implement the following methods representing commands that will manage the content of the catalog:
+  - add: adds a new entry into the catalog; (*solved*)
+  - toString: a textual representation of the catalog; (*solved*)
+  - save: saves the catalog to an external file using JSON format; you may use Jackson or other library; (*solved*)
+  - load: loads the catalog from an external file. (*solved*)
