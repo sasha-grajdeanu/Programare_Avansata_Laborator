@@ -1,37 +1,37 @@
-package instanceOfProblem;
+package Problem.InstanceOfProblem;
 
 import java.util.Objects;
 
 /**
- * this class is a representation for the project
+ * this class is a representation for the student
  * <p>
  * this class implements the interface Comparable.
  */
-public class Project implements Comparable<Project> {
+public class Student implements Comparable<Student> {
     private String name;
 
     /**
      * all-args constructor
      *
-     * @param name the name of the project
+     * @param name the name of the student
      */
-    public Project(String name) {
+    public Student(String name) {
         this.name = name;
     }
 
     /**
-     * getter for the name of the project
+     * getter for the name of the student
      *
-     * @return the name of the project
+     * @return the name of the student
      */
     public String getName() {
         return name;
     }
 
     /**
-     * setter for the name of the project
+     * setter for the name of the student
      *
-     * @param name the name of the project
+     * @param name the name of the student
      */
     public void setName(String name) {
         this.name = name;
@@ -44,7 +44,7 @@ public class Project implements Comparable<Project> {
      */
     @Override
     public String toString() {
-        return "Project{" +
+        return "Student{" +
                 "name='" + name + '\'' +
                 '}';
     }
@@ -56,12 +56,13 @@ public class Project implements Comparable<Project> {
      * @return an integer
      */
     @Override
-    public int compareTo(Project o) {
+    public int compareTo(Student o) {
         return this.name.compareTo(o.getName());
     }
 
     /**
      * overriding method equals
+     *
      * @param o an object
      * @return true/false
      */
@@ -69,8 +70,8 @@ public class Project implements Comparable<Project> {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Project project = (Project) o;
-        return Objects.equals(name, project.name);
+        Student student = (Student) o;
+        return Objects.equals(name, student.name);
     }
 
     /**

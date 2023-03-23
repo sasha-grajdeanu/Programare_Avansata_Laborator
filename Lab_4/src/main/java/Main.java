@@ -1,5 +1,7 @@
-import instanceOfProblem.Project;
-import instanceOfProblem.Student;
+import Problem.InstanceOfProblem.Project;
+import Problem.InstanceOfProblem.Student;
+import Problem.Problem;
+import com.github.javafaker.Faker;
 
 import java.util.*;
 import java.util.stream.IntStream;
@@ -28,8 +30,54 @@ public class Main {
         System.out.println(listOfProjects);
     }
 
-    public static void main(String[] args) {
+    /**
+     * This function create a random instance
+     *
+     * @return a problem
+     */
+    public static Problem sectionWithProblem() {
+        Problem p1 = new Problem();
+        Random rand = new Random();
+        Faker faker = new Faker();
+        Set<Project> listOfProject = new TreeSet<>();
+        for (int i = 0; i < 30; i++) {
+            listOfProject.add(new Project(faker.ancient().hero()));
+        }
+        for (int i = 0; i < 20; i++) {
+            int luckyNumber = rand.nextInt(listOfProject.size()) + 1;
+            List<Project> auxiliar = new ArrayList<>(listOfProject);
+            List<Project> listMe = new ArrayList<>();
+            for (int j = 0; j < luckyNumber; j++) {
+                int randomNumber = rand.nextInt(auxiliar.size());
+                listMe.add(auxiliar.get(randomNumber));
+                auxiliar.remove(randomNumber);
+            }
+            p1.addPreferencies(new Student(faker.name().fullName()), listMe);
+        }
+        return p1;
+    }
+
+    /**
+     * This function is responsible for solving the requirements of the homework.
+     */
+    public static void homework() {
+        Problem instance = sectionWithProblem();
+        System.out.println(instance);
+        instance.interogateMap();
+        String solved = instance.greedyAlg();
+        System.out.println(solved);
+    }
+
+    /**
+     * This function is responsible for solving the requirements of the compulsory.
+     */
+    public static void compulsory() {
         sectionWithStudents();
         sectionWithProjects();
+    }
+
+    public static void main(String[] args) {
+        compulsory();
+        homework();
     }
 }
