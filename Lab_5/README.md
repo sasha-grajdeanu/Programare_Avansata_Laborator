@@ -1,6 +1,6 @@
 # Laboratorul nr. 5
 
-##Compulsory
+## Compulsory
 
 - Create an object-oriented model of the problem. You should have at least the following classes: Catalog, Document. Create a class responsible with external operations regarding a catalog. (*solved*)
 - Implement the following methods representing commands that will manage the content of the catalog:
