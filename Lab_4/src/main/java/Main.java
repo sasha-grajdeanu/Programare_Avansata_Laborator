@@ -39,7 +39,7 @@ public class Main {
         Problem p1 = new Problem();
         Random rand = new Random();
         Faker faker = new Faker();
-        Set<Project> listOfProject = new TreeSet<>();
+        Set<Project> listOfProject = new HashSet<>();
         for (int i = 0; i < 30; i++) {
             listOfProject.add(new Project(faker.ancient().hero()));
         }
