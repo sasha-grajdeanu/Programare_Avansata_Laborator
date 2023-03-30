@@ -1,0 +1,16 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<h1>$nume_catalog</h1>
+<div>
+    #foreach($info in $infoList)
+        <p>$info.name with id: $info.id localized in $info.path</p>
+    #end
+</div>
+</body>
+</html>

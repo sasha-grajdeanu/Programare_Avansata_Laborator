@@ -1,3 +1,5 @@
+package Compulsory;
+
 public class InvalidCatalogException extends Exception {
     /**
      * @param except the exception

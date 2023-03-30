@@ -1,3 +1,5 @@
+package Compulsory;
+
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import java.io.File;
@@ -29,8 +31,11 @@ public class CatalogCommand {
      */
     public static Catalog load(String path) throws InvalidCatalogException, IOException {
         ObjectMapper object = new ObjectMapper();
-        Catalog catalog = object.readValue(new File(path), Catalog.class);
-        return catalog;
+        if(!path.contains(".json"))
+        {
+            throw new InvalidCatalogException(new Exception());
+        }
+        return object.readValue(new File(path), Catalog.class);
     }
 
     public static String toString(Catalog catalog) {
