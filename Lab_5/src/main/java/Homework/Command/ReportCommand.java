@@ -12,6 +12,11 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * this class is responsible for creating a html report related to a catalog
+ * <p>
+ * this class extends the abstract class CommandAdapter
+ */
 
 @NoArgsConstructor
 public class ReportCommand extends CommandAdapter {

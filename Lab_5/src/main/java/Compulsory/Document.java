@@ -18,11 +18,6 @@ public class Document implements Serializable {
     private String name;
     private String path;
     private String id;
-    private Map<String, String> tagList;
 
-    public void addTag(String key, String value)
-    {
-        tagList.put(key, value);
-    }
 
 }

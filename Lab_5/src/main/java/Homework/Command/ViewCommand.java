@@ -10,6 +10,11 @@ import java.io.IOException;
 import java.net.URI;
 import java.net.URISyntaxException;
 
+/**
+ * this class is responsible for opening a document in a catalog
+ *
+ * this class extends the abstract class CommandAdapter
+ */
 @NoArgsConstructor
 public class ViewCommand extends CommandAdapter {
     @Override

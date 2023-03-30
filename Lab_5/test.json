@@ -1,1 +1,1 @@
-{"name":"Compulsory.Catalog 1","contains":[{"name":"Istoria Romaniei","path":"ddr","id":"12-ED-1234","tagList":{"Autor":"Mircea Barbu"}},{"name":"Istoria Americii","path":"ddr","id":"13-ED-1345","tagList":{"Autor":"Richard Heringer"}},{"name":"Istoria Europei","path":"ddr","id":"12-EV-3422","tagList":{"Autor":"Francois Miderand"}}]}
+{"name":"Istorie","contains":[{"name":"Istoria Romaniei","path":"ddr","id":"12-ED-1234"},{"name":"Istoria Americii","path":"ddr","id":"13-ED-1345"},{"name":"Istoria Europei","path":"ddr","id":"12-EV-3422"}]}

@@ -13,6 +13,12 @@ import static java.lang.System.exit;
 
 
 public class Main {
+    /**
+     * this function return an integer necessary for the switch
+     *
+     * @param commandName the name of the command
+     * @return an integer necessary for the switch
+     */
     public static int command(String commandName) {
         if (commandName.contains("add")) {
             return 1;
@@ -35,10 +41,23 @@ public class Main {
         }
     }
 
+    /**
+     * this function create a document
+     *
+     * @param name the name of the document
+     * @param path the path of the document
+     * @param id   the id of the document
+     * @return a document
+     */
     public static Document add(String name, String path, String id) {
         return new Document(name, path, id);
     }
 
+    /**
+     * this function is responsible with the read of the name, path and id of a document, create the document and add in a specified catalog
+     *
+     * @param catalog the catalog
+     */
     public static void commandAdd(Catalog catalog) {
         AddCommand addCommand = new AddCommand();
         Scanner s = new Scanner(System.in);
@@ -56,11 +75,21 @@ public class Main {
         addCommand.execute(catalog, add(name, path, id));
     }
 
+    /**
+     * this function is responsible for listing the documents in a catalog
+     *
+     * @param catalog the catalog
+     */
     public static void commandList(Catalog catalog) {
         ListCommand listCommand = new ListCommand();
         listCommand.execute(catalog);
     }
 
+    /**
+     * this function is responsible for loading a catalog with information from a json file
+     *
+     * @param catalog the catalog
+     */
     public static void commandLoad(Catalog catalog) {
         LoadCommand loadCommand = new LoadCommand();
         Scanner s = new Scanner(System.in);
@@ -73,6 +102,11 @@ public class Main {
         }
     }
 
+    /**
+     * this function is responsible for saving a catalog in a json file
+     *
+     * @param catalog the catalog
+     */
     public static void commandSave(Catalog catalog) {
         SaveCommand saveCommand = new SaveCommand();
         Scanner s = new Scanner(System.in);
@@ -85,6 +119,11 @@ public class Main {
         }
     }
 
+    /**
+     * this function is responsible for creating a report about the catalog
+     *
+     * @param catalog the catalog
+     */
     public static void commandReport(Catalog catalog) {
         ReportCommand reportCommand = new ReportCommand();
         try {
@@ -94,11 +133,21 @@ public class Main {
         }
     }
 
+    /**
+     * this function calls the toString method for a catalog
+     *
+     * @param catalog the catalog
+     */
     public static void commandToString(Catalog catalog) {
         ToStringCommand toStringCommand = new ToStringCommand();
         toStringCommand.execute(catalog);
     }
 
+    /**
+     * this class is responsible for opening a document identified with an id
+     *
+     * @param catalog the catalog
+     */
     public static void commandView(Catalog catalog) {
         ViewCommand viewCommand = new ViewCommand();
         Scanner s = new Scanner(System.in);
@@ -111,10 +160,16 @@ public class Main {
         }
     }
 
+    /**
+     * this function is responsible with the ending of the program
+     */
     public static void commandClose() {
         exit(0);
     }
 
+    /**
+     * this function represent the entire application
+     */
     public static void aplication() {
         Catalog catalog = new Catalog();
         while (true) {
