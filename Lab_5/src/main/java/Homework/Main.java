@@ -87,19 +87,18 @@ public class Main {
 
     /**
      * this function is responsible for loading a catalog with information from a json file
-     *
-     * @param catalog the catalog
      */
-    public static void commandLoad(Catalog catalog) {
+    public static Catalog commandLoad() {
         LoadCommand loadCommand = new LoadCommand();
         Scanner s = new Scanner(System.in);
         System.out.println("Scrieti care este path-ul catalogului: ");
         String path = s.next();
         try {
-            loadCommand.execute(catalog, path);
+            return loadCommand.execute(path);
         } catch (InvalidCatalogException | WrongPath e) {
             System.err.println(e.getMessage());
         }
+        return null;
     }
 
     /**
@@ -180,7 +179,7 @@ public class Main {
             switch (stade) {
                 case 1 -> commandAdd(catalog);
                 case 2 -> commandList(catalog);
-                case 3 -> commandLoad(catalog);
+                case 3 -> catalog = commandLoad();
                 case 4 -> commandReport(catalog);
                 case 5 -> commandSave(catalog);
                 case 6 -> commandToString(catalog);

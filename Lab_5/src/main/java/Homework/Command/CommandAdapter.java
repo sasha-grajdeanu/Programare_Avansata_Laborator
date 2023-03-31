@@ -1,5 +1,6 @@
 package Homework.Command;
 
+import Compulsory.InvalidCatalogException;
 import Homework.Catalog;
 import Homework.Exception.WrongPath;
 import Homework.Objects.Document;
@@ -18,5 +19,9 @@ public abstract class CommandAdapter {
     }
 
     public void execute(Catalog catalog, String path) throws Compulsory.InvalidCatalogException, IOException, URISyntaxException, WrongPath {
+    }
+
+    public Catalog execute(String path) throws InvalidCatalogException, WrongPath{
+        return new Catalog();
     }
 }

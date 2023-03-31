@@ -17,13 +17,13 @@ import java.io.IOException;
 @NoArgsConstructor
 public class LoadCommand extends CommandAdapter {
     @Override
-    public void execute(Catalog catalog, String path) throws InvalidCatalogException, WrongPath {
+    public Catalog execute(String path) throws InvalidCatalogException, WrongPath {
         ObjectMapper object = new ObjectMapper();
         if (!path.contains(".json")) {
             throw new InvalidCatalogException(new Exception("Nu este de tipul JSON."));
         }
         try {
-            catalog = object.readValue(new File(path), Catalog.class);
+            return object.readValue(new File(path), Catalog.class);
         } catch (IOException e) {
             throw new WrongPath(e);
         }
