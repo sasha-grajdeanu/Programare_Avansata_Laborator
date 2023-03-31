@@ -31,8 +31,7 @@ public class CatalogCommand {
      */
     public static Catalog load(String path) throws InvalidCatalogException, IOException {
         ObjectMapper object = new ObjectMapper();
-        if(!path.contains(".json"))
-        {
+        if (!path.contains(".json")) {
             throw new InvalidCatalogException(new Exception());
         }
         return object.readValue(new File(path), Catalog.class);
