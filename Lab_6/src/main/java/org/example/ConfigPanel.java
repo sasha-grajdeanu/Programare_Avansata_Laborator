@@ -25,7 +25,7 @@ public class ConfigPanel extends JPanel {
      */
     private void init() {
         dotsLabel = new JLabel("Number of dots: ");
-        dotsNumber = new JSpinner(new SpinnerNumberModel(5, 3, 100, 1));
+        dotsNumber = new JSpinner(new SpinnerNumberModel(6, 3, 100, 1));
         probability = new JLabel("The probabilities: ");
         Double[] prob = new Double[]{0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0};
         lineProbability = new JComboBox<Double>(prob);
