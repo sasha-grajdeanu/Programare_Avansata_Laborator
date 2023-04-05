@@ -200,7 +200,7 @@ public class DrawingPanel extends JPanel implements Serializable {
                     if (player2.hasATriangle()) {
                         System.out.println("RED WIN");
                         createOffscreenImage();
-                        graphics2D.setColor(Color.BLUE);
+                        graphics2D.setColor(Color.RED);
                         graphics2D.setFont(new Font("DIALOG", Font.BOLD, 50));
                         graphics2D.drawString("RED WIN", 250, 300);
                         graphics2D.setFont(new Font("DIALOG", Font.BOLD, 25));
