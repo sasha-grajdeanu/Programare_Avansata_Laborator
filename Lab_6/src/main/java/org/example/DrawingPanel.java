@@ -59,6 +59,7 @@ public class DrawingPanel extends JPanel implements Serializable {
         out.writeObject(player2);
         out.flush();
         fos.close();
+        reloadGame();
     }
 
     /**

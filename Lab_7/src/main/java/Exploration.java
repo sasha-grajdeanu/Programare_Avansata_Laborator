@@ -17,7 +17,7 @@ public class Exploration {
             new Thread(robot).start();
         }
     }
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         var explore = new Exploration();
         explore.addRobot(new Robot("Wall-E"));
         explore.addRobot(new Robot("R2D2"));
