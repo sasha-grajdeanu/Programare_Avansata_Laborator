@@ -112,3 +112,18 @@ Create the following components:
 - Create an object oriented model of the problem. (*solved*)
 - Each robot will have a name and they must perform in a concurrent manner, moving randomly around the map and extracting tokens from the shared memory when reaching an unvisited cell. A message will be displayed on the screen every time a robot visits a new cell. (*solved*)
 - __Simulate the exploration using a thread for each robot.__  Pay attention to the synchronization of the threads when extracting tokens and when visiting cells. (*solved*)
+
+
+## Laboratorul nr. 8
+
+### Compulsory
+- Create a relational database using any RDBMS (Oracle, Postgres, MySql, Java DB, etc.). (*solved*)
+- Write an SQL script that will create the following tables: (*solved*)
+  - albums: id, release year, title, artist, genre(s)
+  - artists: id, name (for example: Beatles)
+  - genres: id, name (for example: Rock)
+  - an associative (junction) table in order to store each album genres  
+- Update pom.xml, in order to add the database driver to the project libraries. (*solved*)
+- Create a singleton class in order to manage a connection to the database. (*solved*)
+- Create DAO classes that offer methods for managing artists, genres and albums (at least one). (*solved*)
+- Implement a simple test using your classes.  (*solved*)
