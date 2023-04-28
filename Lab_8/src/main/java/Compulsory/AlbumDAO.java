@@ -1,3 +1,5 @@
+package Compulsory;
+
 import java.sql.*;
 
 public class AlbumDAO {

@@ -1,3 +1,5 @@
+package Compulsory;
+
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -30,13 +32,13 @@ public class Main {
             Statement stmt = Database.getConnection().createStatement();
             String sql = "SELECT * FROM albums";
             ResultSet resultSet = stmt.executeQuery(sql);
-            while(resultSet.next()){
+            while (resultSet.next()) {
                 int id = resultSet.getInt("id");
                 int an = resultSet.getInt("release_year");
                 String title = resultSet.getString("title");
-                String theArtist  = artists.findById(resultSet.getInt("artist"));
+                String theArtist = artists.findById(resultSet.getInt("artist"));
                 String genre = genres.findById(resultSet.getInt("genre"));
-                System.out.println(id + " | " + an+ " | " + title+ " | " + theArtist + " | "+genre);
+                System.out.println(id + " | " + an + " | " + title + " | " + theArtist + " | " + genre);
             }
 
             System.out.println("Finish");
