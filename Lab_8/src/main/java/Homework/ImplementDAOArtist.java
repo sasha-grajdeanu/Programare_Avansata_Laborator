@@ -9,7 +9,7 @@ import java.util.List;
 /**
  * implementation of ArtistDAO
  */
-public class ImplementDAOArtist implements ArtistDAO {
+public class ImplementDAOArtist implements DAO<Artist> {
 
     /**
      * implementation of create method

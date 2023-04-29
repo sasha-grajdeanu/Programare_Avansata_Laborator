@@ -8,7 +8,7 @@ import java.util.List;
 /**
  * implementation of AlbumsDAO
  */
-public class ImplementDAOAlbums implements AlbumsDAO {
+public class ImplementDAOAlbums implements DAO<Albums> {
     private ImplementDAOArtist implementDAOArtist = new ImplementDAOArtist();
     private ImplementDAOGenres implementDAOGenres = new ImplementDAOGenres();
 

@@ -4,7 +4,7 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ImplementDAOGenres implements GenresDAO {
+public class ImplementDAOGenres implements DAO<Genres> {
 
     /**
      * implementation of create method
