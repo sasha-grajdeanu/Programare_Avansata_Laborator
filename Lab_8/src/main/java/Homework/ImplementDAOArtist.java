@@ -10,9 +10,10 @@ public class ImplementDAOArtist implements ArtistDAO{
 
     @Override
     public void create(Artist artist) throws SQLException {
-        Connection con = Database.getConnection();
-        Statement statement = con.createStatement();
-        ResultSet resultSet = statement.executeQuery("select name from artists where name = '" + artist.getName() + "'");
+        Connection con = DBCPDatabase.getConnection();
+        PreparedStatement check = con.prepareStatement("select * from artists where name = ((?))");
+        check.setString(1, artist.getName());
+        ResultSet resultSet = check.executeQuery();
         if(!resultSet.next()){
             try (PreparedStatement preparedStatement = con.prepareStatement("insert into artists (id, name) values (?, ?)")) {
                 preparedStatement.setInt(1, artist.getId());
@@ -24,17 +25,21 @@ public class ImplementDAOArtist implements ArtistDAO{
         else{
             System.err.println("Artist deja inserat");
         }
+        resultSet.close();
+        con.close();
     }
 
     @Override
     public Artist findByName(String name) throws SQLException {
         Artist artist = null;
-        Connection con = Database.getConnection();
+        Connection con = DBCPDatabase.getConnection();
         try (Statement statement = con.createStatement();
              ResultSet resultSet = statement.executeQuery("select * from artists where name='" + name + "'")) {
              if(resultSet.next()){
                  artist = new Artist(resultSet.getInt("id"), resultSet.getString("name"));
              }
+            resultSet.close();
+             con.close();
              return artist;
         }
     }
@@ -42,12 +47,14 @@ public class ImplementDAOArtist implements ArtistDAO{
     @Override
     public Artist findById(int id) throws SQLException {
         Artist artist = null;
-        Connection con = Database.getConnection();
+        Connection con = DBCPDatabase.getConnection();
         try (Statement statement = con.createStatement();
              ResultSet resultSet = statement.executeQuery("select * from artists where id='" + id + "'")) {
             if(resultSet.next()){
                 artist = new Artist(resultSet.getInt("id"), resultSet.getString("name"));
             }
+            resultSet.close();
+            con.close();
             return artist;
         }
     }
@@ -61,6 +68,8 @@ public class ImplementDAOArtist implements ArtistDAO{
             while(resultSet.next()){
                 artists.add(new Artist(resultSet.getInt("id"), resultSet.getString("name")));
             }
+            resultSet.close();
+            con.close();
             return artists;
         }
     }

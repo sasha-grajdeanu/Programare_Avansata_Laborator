@@ -1,9 +1,15 @@
+drop table junction_table;
+drop table albums;
+drop table artists;
+drop table genres;
+
+
 create table artists (id int primary key, name varchar2(100) not null);
 create table genres (id int primary key, name varchar2(100) not null);
 create table albums (
                         id int primary key,
                         release_year int not null,
-                        title varchar2(30) not null,
+                        title varchar2(100) not null,
                         artist int not null,
                         genre int not null,
                         constraint album_id_artist foreign key (artist) references artists(id),
@@ -20,7 +26,6 @@ create table junction_table(
 CREATE SEQUENCE artist_increment START WITH 1;
 CREATE SEQUENCE genres_increment START WITH 1;
 CREATE SEQUENCE albums_increment START WITH 1;
-
 
 CREATE OR REPLACE TRIGGER artist_add
     BEFORE INSERT ON artists
@@ -49,3 +54,14 @@ BEGIN
     INTO   :new.id
     FROM   dual;
 END;
+
+drop trigger genres_add;
+drop trigger albums_add;
+drop trigger artist_add;
+
+
+
+
+drop sequence albums_increment;
+drop sequence artist_increment;
+drop sequence genres_increment;
