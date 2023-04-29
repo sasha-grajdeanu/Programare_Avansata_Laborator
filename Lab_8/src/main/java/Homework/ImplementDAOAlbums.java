@@ -5,10 +5,19 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+/**
+ * implementation of AlbumsDAO
+ */
 public class ImplementDAOAlbums implements AlbumsDAO {
     private ImplementDAOArtist implementDAOArtist = new ImplementDAOArtist();
     private ImplementDAOGenres implementDAOGenres = new ImplementDAOGenres();
 
+    /**
+     * implementation of create method
+     *
+     * @param albums
+     * @throws SQLException
+     */
     @Override
     public void create(Albums albums) throws SQLException {
         Connection con = DBCPDatabase.getConnection();
@@ -21,7 +30,7 @@ public class ImplementDAOAlbums implements AlbumsDAO {
             check.setInt(2, implementDAOArtist.findByName(albums.getArtist()).getId());
             check.setInt(3, implementDAOGenres.findByName(string).getId());
             ResultSet resultSet = check.executeQuery();
-            if(resultSet.next()){
+            if (resultSet.next()) {
                 genresList.remove(string);
             }
             resultSet.close();
@@ -44,10 +53,17 @@ public class ImplementDAOAlbums implements AlbumsDAO {
         con.close();
     }
 
+    /**
+     * implementation of the findByName method
+     *
+     * @param name
+     * @return
+     * @throws SQLException
+     */
     @Override
     public Albums findByName(String name) throws SQLException {
         Albums albums = null;
-        Connection con = Database.getConnection();
+        Connection con = DBCPDatabase.getConnection();
         try (Statement statement = con.createStatement(); ResultSet resultSet = statement.executeQuery("select * from albums where title='" + name + "'");) {
             albums = new Albums();
             resultSet.next();
@@ -66,13 +82,64 @@ public class ImplementDAOAlbums implements AlbumsDAO {
         return albums;
     }
 
+    /**
+     * implementation of the findById method
+     *
+     * @param id
+     * @return
+     * @throws SQLException
+     */
     @Override
     public Albums findById(int id) throws SQLException {
-        return null;
+        Albums albums = null;
+        Connection con = DBCPDatabase.getConnection();
+        try (Statement statement = con.createStatement();
+             ResultSet resultSet = statement.executeQuery("select * from albums where id='" + id + "'")) {
+            if (resultSet.next()) {
+                albums = new Albums();
+                albums.setRelease_year(resultSet.getInt("release_year"));
+                albums.setTitle(resultSet.getString("title"));
+                albums.setArtist(implementDAOArtist.findById(resultSet.getInt("artist")).getName());
+                albums.setGenre(implementDAOGenres.findById(resultSet.getInt("genre")).getName());
+            }
+            resultSet.close();
+            con.close();
+            return albums;
+        }
     }
 
+    /**
+     * implementation of the findAll method
+     *
+     * @return
+     * @throws SQLException
+     */
     @Override
     public List<Albums> findAll() throws SQLException {
-        return null;
+        List<Albums> albumsList = new ArrayList<>();
+        Connection con = DBCPDatabase.getConnection();
+        try (Statement statement = con.createStatement();
+             ResultSet resultSet = statement.executeQuery("select * from albums ")) {
+            while (resultSet.next()) {
+                String s = resultSet.getString("title");
+                String g = implementDAOGenres.findById(resultSet.getInt("genre")).getName();
+                boolean exist = false;
+                for (int i = 0; i < albumsList.size(); i++) {
+                    if (albumsList.get(i).getGenre().equals(s)) {
+                        StringBuilder stringBuilder = new StringBuilder(albumsList.get(i).getGenre());
+                        stringBuilder.append(", ");
+                        stringBuilder.append(g);
+                        albumsList.get(i).setGenre(stringBuilder.toString());
+                        exist = true;
+                        break;
+                    }
+                }
+                if (!exist) {
+                    albumsList.add(new Albums(resultSet.getInt("release_year"), resultSet.getString("title"), implementDAOArtist.findById(resultSet.getInt("artist")).getName(), implementDAOGenres.findById(resultSet.getInt("genre")).getName()));
+                }
+            }
+            resultSet.close();
+            return albumsList;
+        }
     }
 }

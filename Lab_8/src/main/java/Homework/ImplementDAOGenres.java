@@ -1,13 +1,17 @@
 package Homework;
 
-import Compulsory.Database;
-
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
 public class ImplementDAOGenres implements GenresDAO {
 
+    /**
+     * implementation of create method
+     *
+     * @param genres
+     * @throws SQLException
+     */
     @Override
     public void create(Genres genres) throws SQLException {
         Connection con = DBCPDatabase.getConnection();
@@ -22,20 +26,25 @@ public class ImplementDAOGenres implements GenresDAO {
                 int val = preparedStatement.executeUpdate();
                 System.out.println(val);
             }
-        }
-        else{
+        } else {
             System.err.println("Gen deja inserat");
         }
         resultSet.close();
         con.close();
     }
 
+    /**
+     * implementation of the findByName method
+     *
+     * @param name
+     * @return
+     * @throws SQLException
+     */
     @Override
     public Genres findByName(String name) throws SQLException {
         Genres genres = null;
         Connection con = DBCPDatabase.getConnection();
-        try (Statement statement = con.createStatement();
-             ResultSet resultSet = statement.executeQuery("select * from genres where name='" + name + "'")) {
+        try (Statement statement = con.createStatement(); ResultSet resultSet = statement.executeQuery("select * from genres where name='" + name + "'")) {
             if (resultSet.next()) {
                 genres = new Genres(resultSet.getInt("id"), resultSet.getString("name"));
             }
@@ -45,12 +54,18 @@ public class ImplementDAOGenres implements GenresDAO {
         }
     }
 
+    /**
+     * implementation of the findById method
+     *
+     * @param id
+     * @return
+     * @throws SQLException
+     */
     @Override
     public Genres findById(int id) throws SQLException {
         Genres genres = null;
         Connection con = DBCPDatabase.getConnection();
-        try (Statement statement = con.createStatement();
-             ResultSet resultSet = statement.executeQuery("select * from genres where id='" + id + "'")) {
+        try (Statement statement = con.createStatement(); ResultSet resultSet = statement.executeQuery("select * from genres where id='" + id + "'")) {
             if (resultSet.next()) {
                 genres = new Genres(resultSet.getInt("id"), resultSet.getString("name"));
             }
@@ -60,12 +75,17 @@ public class ImplementDAOGenres implements GenresDAO {
         }
     }
 
+    /**
+     * implementation of the findAll method
+     *
+     * @return
+     * @throws SQLException
+     */
     @Override
     public List<Genres> findAll() throws SQLException {
         List<Genres> genres = new ArrayList<>();
         Connection con = DBCPDatabase.getConnection();
-        try (Statement statement = con.createStatement();
-             ResultSet resultSet = statement.executeQuery("select * from genres ")) {
+        try (Statement statement = con.createStatement(); ResultSet resultSet = statement.executeQuery("select * from genres ")) {
             while (resultSet.next()) {
                 genres.add(new Genres(resultSet.getInt("id"), resultSet.getString("name")));
             }
