@@ -134,3 +134,10 @@ Create the following components:
 - Create a singleton class in order to manage a connection to the database. (*solved*)
 - Create DAO classes that offer methods for managing artists, genres and albums (at least one). (*solved*)
 - Implement a simple test using your classes.  (*solved*)
+
+### Homework
+
+- Create an object-oriented model of the data managed by the Java application.  (*solved*)
+- Implement all the DAO classes. (*solved*)
+- Use a connection pool in order to manage database connections, such as C3PO, HikariCP or Apache Commons DBCP. (*solved*)
+- Create a tool to import data from a real dataset, such as Rolling Stone's 500 Greatest Albums of All Time (or other). (*solved*)
