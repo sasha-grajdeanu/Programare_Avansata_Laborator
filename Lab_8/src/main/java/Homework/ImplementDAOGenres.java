@@ -9,8 +9,8 @@ public class ImplementDAOGenres implements DAO<Genres> {
     /**
      * implementation of create method
      *
-     * @param genres
-     * @throws SQLException
+     * @param genres a genre
+     * @throws SQLException error
      */
     @Override
     public void create(Genres genres) throws SQLException {
@@ -36,9 +36,9 @@ public class ImplementDAOGenres implements DAO<Genres> {
     /**
      * implementation of the findByName method
      *
-     * @param name
-     * @return
-     * @throws SQLException
+     * @param name the name of the genre
+     * @return a genre
+     * @throws SQLException error
      */
     @Override
     public Genres findByName(String name) throws SQLException {
@@ -57,9 +57,9 @@ public class ImplementDAOGenres implements DAO<Genres> {
     /**
      * implementation of the findById method
      *
-     * @param id
-     * @return
-     * @throws SQLException
+     * @param id the id of the genre
+     * @return a genre
+     * @throws SQLException error
      */
     @Override
     public Genres findById(int id) throws SQLException {
@@ -78,8 +78,8 @@ public class ImplementDAOGenres implements DAO<Genres> {
     /**
      * implementation of the findAll method
      *
-     * @return
-     * @throws SQLException
+     * @return a list
+     * @throws SQLException error
      */
     @Override
     public List<Genres> findAll() throws SQLException {

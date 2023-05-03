@@ -14,8 +14,8 @@ public class ImplementDAOArtist implements DAO<Artist> {
     /**
      * implementation of create method
      *
-     * @param artist
-     * @throws SQLException
+     * @param artist an artist
+     * @throws SQLException error
      */
     @Override
     public void create(Artist artist) throws SQLException {
@@ -40,9 +40,9 @@ public class ImplementDAOArtist implements DAO<Artist> {
     /**
      * implementation of the findByName method
      *
-     * @param name
-     * @return
-     * @throws SQLException
+     * @param name the name of the artist
+     * @return an artist
+     * @throws SQLException error
      */
     @Override
     public Artist findByName(String name) throws SQLException {
@@ -61,9 +61,9 @@ public class ImplementDAOArtist implements DAO<Artist> {
     /**
      * implementation of the findById method
      *
-     * @param id
-     * @return
-     * @throws SQLException
+     * @param id the id of the artist
+     * @return an artist
+     * @throws SQLException error
      */
     @Override
     public Artist findById(int id) throws SQLException {
@@ -82,8 +82,8 @@ public class ImplementDAOArtist implements DAO<Artist> {
     /**
      * implementation of the findAll method
      *
-     * @return
-     * @throws SQLException
+     * @return a list
+     * @throws SQLException error
      */
     @Override
     public List<Artist> findAll() throws SQLException {

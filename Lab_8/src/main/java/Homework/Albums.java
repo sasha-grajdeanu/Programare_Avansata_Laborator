@@ -9,6 +9,7 @@ import lombok.Data;
 @Data
 @AllArgsConstructor
 public class Albums {
+    private int id;
     private int release_year;
     private String title;
     private String artist;

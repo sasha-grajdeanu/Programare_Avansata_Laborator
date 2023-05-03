@@ -28,13 +28,19 @@ public class ToolToInsertCSV {
             String[] nextLine;
             reader.readNext();
             while ((nextLine = reader.readNext()) != null) {
-                if (nextLine[3].contains("'")) {
+                while (nextLine[3].contains("'")) {
                     StringBuilder stringBuilder = new StringBuilder(nextLine[3]);
                     stringBuilder.replace(stringBuilder.indexOf("'"), stringBuilder.indexOf("'") + 1, "`");
                     nextLine[3] = stringBuilder.toString();
                     System.out.println(nextLine[3]);
                 }
-                Albums albums = new Albums(Integer.parseInt(nextLine[1]), nextLine[2], nextLine[3], nextLine[4]);
+                while (nextLine[2].contains("'")) {
+                    StringBuilder stringBuilder = new StringBuilder(nextLine[2]);
+                    stringBuilder.replace(stringBuilder.indexOf("'"), stringBuilder.indexOf("'") + 1, "`");
+                    nextLine[2] = stringBuilder.toString();
+                    System.out.println(nextLine[2]);
+                }
+                Albums albums = new Albums(Integer.parseInt(nextLine[0]), Integer.parseInt(nextLine[1]), nextLine[2], nextLine[3], nextLine[4]);
                 System.out.println(albums);
                 albumsList.add(albums);
                 if (implementDAOArtist.findByName(albums.getArtist()) == null) {
