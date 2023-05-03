@@ -72,8 +72,7 @@ public class ImplementDAOAlbums implements DAO<Albums> {
             albums.setArtist(implementDAOArtist.findById(resultSet.getInt("artist")).getName());
             StringBuilder genres = new StringBuilder(implementDAOGenres.findById(resultSet.getInt("genre")).getName());
             while (resultSet.next()) {
-                genres.append(",");
-                genres.append(implementDAOGenres.findById(resultSet.getInt("genre")).getName());
+                genres.append(","+implementDAOGenres.findById(resultSet.getInt("genre")).getName());
             }
             albums.setGenre(genres.toString());
             con.close();
@@ -125,7 +124,7 @@ public class ImplementDAOAlbums implements DAO<Albums> {
                 String g = implementDAOGenres.findById(resultSet.getInt("genre")).getName();
                 boolean exist = false;
                 for (int i = 0; i < albumsList.size(); i++) {
-                    if (albumsList.get(i).getGenre().equals(s)) {
+                    if (albumsList.get(i).getTitle().equals(s)) {
                         StringBuilder stringBuilder = new StringBuilder(albumsList.get(i).getGenre());
                         stringBuilder.append(", ");
                         stringBuilder.append(g);
