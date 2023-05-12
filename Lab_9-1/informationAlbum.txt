@@ -1,0 +1,9 @@
+
+
+		The album with id 5: 
+Optional[Album{id=5, releaseYear=1990, title='Album_4', artist=Artist{id=6, name='Paul Klee}, genreSet=[Genre{id=9, name='Latin'}, Genre{id=7, name='Non Music'}]}]
+
+		Album gasit 5: 
+Optional[Album{id=5, releaseYear=1945, title='Album_4', artist=Artist{id=65, name='Magritte}, genreSet=[Genre{id=76, name='Reggae'}, Genre{id=49, name='Latin'}, Genre{id=25, name='Rock'}, Genre{id=30, name='Latin'}]}]		Album gasit 8: 
+Optional[Album{id=8, releaseYear=2000, title='Album nr. 7', artist=Artist{id=57, name='Renoir}, genreSet=[Genre{id=83, name='Reggae'}, Genre{id=69, name='Funk'}, Genre{id=11, name='Jazz'}]}]	Album gasit 31: 
+Optional[Album{id=31, releaseYear=2011, title='Album nr. 30', artist=Artist{id=35, name='Botticelli}, genreSet=[Genre{id=49, name='Country'}, Genre{id=20, name='Stage And Screen'}]}]

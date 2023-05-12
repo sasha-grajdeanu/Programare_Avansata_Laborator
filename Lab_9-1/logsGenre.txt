@@ -1,0 +1,2 @@
+	TImp de executie: 549 ms
+	Timp de executie : 443 ms

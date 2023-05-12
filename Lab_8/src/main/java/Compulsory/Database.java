@@ -33,7 +33,6 @@ public class Database {
         try {
             Class.forName("oracle.jdbc.driver.OracleDriver");
             connection = DriverManager.getConnection(URL, USER, PASSWD);
-            ;
             connection.setAutoCommit(false);
         } catch (SQLException | ClassNotFoundException e) {
             System.err.println(e);

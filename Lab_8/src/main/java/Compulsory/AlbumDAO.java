@@ -33,7 +33,7 @@ public class AlbumDAO {
     }
 
     /**
-     * this method search the id of the given name in the albums tabel
+     * this method search the id of the given name in the albums table
      * @param name
      * @return
      * @throws SQLException
