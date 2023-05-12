@@ -1,2 +1,3 @@
 	Timp de executie: 29 | 582 ms
 	Timp de executie: 8 | 475 ms
+	Timp de executie: 13 | 295 ms

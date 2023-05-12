@@ -2,3 +2,5 @@
 	Timp de executie : 456 ms
 	Timp de executie : 697 ms
 	Timp de executie : 356 ms
+	Timp de executie : 506 ms
+	Timp de executie : 246 ms

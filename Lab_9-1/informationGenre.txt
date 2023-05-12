@@ -1,104 +1,104 @@
 	Genuri din baza de date: 
-Genre{id=1, name='Non Music'}
-Genre{id=2, name='Pop'}
-Genre{id=3, name='Stage And Screen'}
-Genre{id=4, name='Latin'}
-Genre{id=5, name='Latin'}
-Genre{id=6, name='Reggae'}
-Genre{id=7, name='Funk'}
-Genre{id=8, name='World'}
-Genre{id=9, name='Rap'}
-Genre{id=10, name='Latin'}
-Genre{id=11, name='Country'}
-Genre{id=12, name='World'}
-Genre{id=13, name='Stage And Screen'}
-Genre{id=14, name='Rock'}
-Genre{id=15, name='Electronic'}
-Genre{id=16, name='Stage And Screen'}
-Genre{id=17, name='Jazz'}
-Genre{id=18, name='Folk'}
-Genre{id=19, name='Reggae'}
-Genre{id=20, name='Rap'}
-Genre{id=21, name='Folk'}
-Genre{id=22, name='Jazz'}
-Genre{id=23, name='Funk'}
-Genre{id=24, name='Pop'}
-Genre{id=25, name='Rock'}
-Genre{id=26, name='Jazz'}
-Genre{id=27, name='Folk'}
-Genre{id=28, name='Jazz'}
-Genre{id=29, name='Reggae'}
-Genre{id=30, name='Soul'}
-Genre{id=31, name='Funk'}
-Genre{id=32, name='Folk'}
-Genre{id=33, name='Stage And Screen'}
-Genre{id=34, name='Non Music'}
-Genre{id=35, name='Electronic'}
-Genre{id=36, name='Reggae'}
-Genre{id=37, name='Classical'}
-Genre{id=38, name='Non Music'}
-Genre{id=39, name='Blues'}
-Genre{id=40, name='World'}
-Genre{id=41, name='Reggae'}
-Genre{id=42, name='Stage And Screen'}
-Genre{id=43, name='Latin'}
-Genre{id=44, name='Jazz'}
-Genre{id=45, name='Pop'}
-Genre{id=46, name='Rap'}
-Genre{id=47, name='Rock'}
-Genre{id=48, name='Electronic'}
-Genre{id=49, name='Reggae'}
-Genre{id=50, name='Jazz'}
-Genre{id=51, name='Jazz'}
-Genre{id=52, name='Country'}
-Genre{id=53, name='Blues'}
-Genre{id=54, name='Latin'}
-Genre{id=55, name='Stage And Screen'}
-Genre{id=56, name='Non Music'}
-Genre{id=57, name='Hip Hop'}
-Genre{id=58, name='Funk'}
-Genre{id=59, name='Rap'}
-Genre{id=60, name='Soul'}
-Genre{id=61, name='Folk'}
-Genre{id=62, name='Funk'}
-Genre{id=63, name='Pop'}
-Genre{id=64, name='Reggae'}
-Genre{id=65, name='Blues'}
-Genre{id=66, name='Classical'}
-Genre{id=67, name='Soul'}
-Genre{id=68, name='Country'}
-Genre{id=69, name='Country'}
-Genre{id=70, name='Latin'}
-Genre{id=71, name='Funk'}
-Genre{id=72, name='Latin'}
-Genre{id=73, name='Electronic'}
-Genre{id=74, name='Rock'}
-Genre{id=75, name='Hip Hop'}
-Genre{id=76, name='Jazz'}
-Genre{id=77, name='Stage And Screen'}
-Genre{id=78, name='Classical'}
-Genre{id=79, name='Non Music'}
-Genre{id=80, name='Country'}
-Genre{id=81, name='Hip Hop'}
-Genre{id=82, name='Country'}
-Genre{id=83, name='Rock'}
-Genre{id=84, name='Stage And Screen'}
-Genre{id=85, name='Pop'}
-Genre{id=86, name='Soul'}
-Genre{id=87, name='World'}
-Genre{id=88, name='Classical'}
-Genre{id=89, name='Folk'}
-Genre{id=90, name='Rock'}
-Genre{id=91, name='Funk'}
-Genre{id=92, name='Latin'}
-Genre{id=93, name='Latin'}
-Genre{id=94, name='Soul'}
-Genre{id=95, name='World'}
-Genre{id=96, name='Funk'}
-Genre{id=97, name='Hip Hop'}
-Genre{id=98, name='World'}
-Genre{id=99, name='Jazz'}
-Genre{id=100, name='Classical'}
+Genre{id=1, name='World'}
+Genre{id=2, name='Hip Hop'}
+Genre{id=3, name='Folk'}
+Genre{id=4, name='Blues'}
+Genre{id=5, name='Reggae'}
+Genre{id=6, name='Country'}
+Genre{id=7, name='Blues'}
+Genre{id=8, name='Classical'}
+Genre{id=9, name='Jazz'}
+Genre{id=10, name='Rap'}
+Genre{id=11, name='Classical'}
+Genre{id=12, name='Latin'}
+Genre{id=13, name='Soul'}
+Genre{id=14, name='Electronic'}
+Genre{id=15, name='Non Music'}
+Genre{id=16, name='Rock'}
+Genre{id=17, name='Electronic'}
+Genre{id=18, name='Classical'}
+Genre{id=19, name='Rap'}
+Genre{id=20, name='Soul'}
+Genre{id=21, name='Latin'}
+Genre{id=22, name='Country'}
+Genre{id=23, name='Blues'}
+Genre{id=24, name='Rock'}
+Genre{id=25, name='Classical'}
+Genre{id=26, name='Rock'}
+Genre{id=27, name='Pop'}
+Genre{id=28, name='Non Music'}
+Genre{id=29, name='Jazz'}
+Genre{id=30, name='Latin'}
+Genre{id=31, name='Rap'}
+Genre{id=32, name='Hip Hop'}
+Genre{id=33, name='Folk'}
+Genre{id=34, name='Pop'}
+Genre{id=35, name='Country'}
+Genre{id=36, name='Jazz'}
+Genre{id=37, name='Pop'}
+Genre{id=38, name='Reggae'}
+Genre{id=39, name='Electronic'}
+Genre{id=40, name='Latin'}
+Genre{id=41, name='Pop'}
+Genre{id=42, name='Hip Hop'}
+Genre{id=43, name='Funk'}
+Genre{id=44, name='World'}
+Genre{id=45, name='Soul'}
+Genre{id=46, name='Pop'}
+Genre{id=47, name='Pop'}
+Genre{id=48, name='Latin'}
+Genre{id=49, name='Non Music'}
+Genre{id=50, name='Soul'}
+Genre{id=51, name='Electronic'}
+Genre{id=52, name='Jazz'}
+Genre{id=53, name='Folk'}
+Genre{id=54, name='Electronic'}
+Genre{id=55, name='Rock'}
+Genre{id=56, name='Rock'}
+Genre{id=57, name='Non Music'}
+Genre{id=58, name='Latin'}
+Genre{id=59, name='Pop'}
+Genre{id=60, name='Electronic'}
+Genre{id=61, name='Latin'}
+Genre{id=62, name='Blues'}
+Genre{id=63, name='Funk'}
+Genre{id=64, name='Electronic'}
+Genre{id=65, name='Non Music'}
+Genre{id=66, name='Pop'}
+Genre{id=67, name='Stage And Screen'}
+Genre{id=68, name='Funk'}
+Genre{id=69, name='Electronic'}
+Genre{id=70, name='Pop'}
+Genre{id=71, name='Country'}
+Genre{id=72, name='Folk'}
+Genre{id=73, name='Pop'}
+Genre{id=74, name='Classical'}
+Genre{id=75, name='Rap'}
+Genre{id=76, name='Folk'}
+Genre{id=77, name='Non Music'}
+Genre{id=78, name='Reggae'}
+Genre{id=79, name='Rap'}
+Genre{id=80, name='Non Music'}
+Genre{id=81, name='Non Music'}
+Genre{id=82, name='Jazz'}
+Genre{id=83, name='Latin'}
+Genre{id=84, name='Funk'}
+Genre{id=85, name='Classical'}
+Genre{id=86, name='World'}
+Genre{id=87, name='Hip Hop'}
+Genre{id=88, name='Electronic'}
+Genre{id=89, name='Non Music'}
+Genre{id=90, name='Jazz'}
+Genre{id=91, name='Reggae'}
+Genre{id=92, name='Jazz'}
+Genre{id=93, name='Blues'}
+Genre{id=94, name='World'}
+Genre{id=95, name='Stage And Screen'}
+Genre{id=96, name='Soul'}
+Genre{id=97, name='Stage And Screen'}
+Genre{id=98, name='Rap'}
+Genre{id=99, name='Rap'}
+Genre{id=100, name='Non Music'}
 
-	Gen gasit Optional[Genre{id=91, name='Funk'}] :
-Optional[Genre{id=91, name='Funk'}]
+	Gen gasit Optional[Genre{id=45, name='Soul'}] :
+Optional[Genre{id=45, name='Soul'}]

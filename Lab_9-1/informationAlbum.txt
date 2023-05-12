@@ -1,3 +1,4 @@
 	Album gasit 29: 
 Optional[Album{id=29, releaseYear=1984, title='Album nr. 28', artist=Artist{id=65, name='Donatello}, genreSet=[Genre{id=72, name='Electronic'}, Genre{id=74, name='Blues'}, Genre{id=58, name='World'}]}]	Album gasit 8: 
-Optional[Album{id=8, releaseYear=1963, title='Album nr. 7', artist=Artist{id=35, name='Picasso}, genreSet=[Genre{id=13, name='Stage And Screen'}, Genre{id=52, name='Country'}, Genre{id=79, name='Non Music'}]}]
+Optional[Album{id=8, releaseYear=1963, title='Album nr. 7', artist=Artist{id=35, name='Picasso}, genreSet=[Genre{id=13, name='Stage And Screen'}, Genre{id=52, name='Country'}, Genre{id=79, name='Non Music'}]}]	Album gasit 13: 
+Optional[Album{id=13, releaseYear=2008, title='Album nr. 12', artist=Artist{id=39, name='Rothko}, genreSet=[Genre{id=25, name='Classical'}, Genre{id=59, name='Pop'}]}]

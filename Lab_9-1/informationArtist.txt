@@ -209,3 +209,109 @@ Artist{id=100, name='Titian}
 Artist{id=48, name='Manet}
 Artist{id=50, name='Manet}
 Artist{id=97, name='Manet}
+	Artisti gasiti in baza de date: 
+Artist{id=1, name='Munch}
+Artist{id=2, name='Vettriano}
+Artist{id=3, name='El Greco}
+Artist{id=4, name='Da Vinci}
+Artist{id=5, name='Gauguin}
+Artist{id=6, name='Vincent}
+Artist{id=7, name='Winslow Homer}
+Artist{id=8, name='Ansel Adams}
+Artist{id=9, name='Magritte}
+Artist{id=10, name='Bernini}
+Artist{id=11, name='Warhol}
+Artist{id=12, name='Matisse}
+Artist{id=13, name='Klimt}
+Artist{id=14, name='Titian}
+Artist{id=15, name='Botticelli}
+Artist{id=16, name='Dali}
+Artist{id=17, name='Michelangelo}
+Artist{id=18, name='Diego Rivera}
+Artist{id=19, name='El Greco}
+Artist{id=20, name='Degas}
+Artist{id=21, name='Magritte}
+Artist{id=22, name='Paul Klee}
+Artist{id=23, name='Escher}
+Artist{id=24, name='Manet}
+Artist{id=25, name='Warhol}
+Artist{id=26, name='Magritte}
+Artist{id=27, name='Klimt}
+Artist{id=28, name='Matisse}
+Artist{id=29, name='Ansel Adams}
+Artist{id=30, name='Cassatt}
+Artist{id=31, name='Warhol}
+Artist{id=32, name='Rembrandt}
+Artist{id=33, name='Joan Miro}
+Artist{id=34, name='Matisse}
+Artist{id=35, name='Pollock}
+Artist{id=36, name='Diego Rivera}
+Artist{id=37, name='Cassatt}
+Artist{id=38, name='Warhol}
+Artist{id=39, name='Rothko}
+Artist{id=40, name='Manet}
+Artist{id=41, name='Seurat}
+Artist{id=42, name='Joan Miro}
+Artist{id=43, name='Cezanne}
+Artist{id=44, name='Titian}
+Artist{id=45, name='Kahlo}
+Artist{id=46, name='Caravaggio}
+Artist{id=47, name='Klimt}
+Artist{id=48, name='Magritte}
+Artist{id=49, name='Joan Miro}
+Artist{id=50, name='Munch}
+Artist{id=51, name='Pissarro}
+Artist{id=52, name='Cassatt}
+Artist{id=53, name='Pollock}
+Artist{id=54, name='Kahlo}
+Artist{id=55, name='Magritte}
+Artist{id=56, name='Manet}
+Artist{id=57, name='Vincent}
+Artist{id=58, name='Chagall}
+Artist{id=59, name='Manet}
+Artist{id=60, name='Monet}
+Artist{id=61, name='Munch}
+Artist{id=62, name='Durer}
+Artist{id=63, name='Titian}
+Artist{id=64, name='Pissarro}
+Artist{id=65, name='Donatello}
+Artist{id=66, name='Manet}
+Artist{id=67, name='Joan Miro}
+Artist{id=68, name='Rothko}
+Artist{id=69, name='Munch}
+Artist{id=70, name='Picasso}
+Artist{id=71, name='Ansel Adams}
+Artist{id=72, name='Kahlo}
+Artist{id=73, name='Monet}
+Artist{id=74, name='Escher}
+Artist{id=75, name='Paul Klee}
+Artist{id=76, name='Escher}
+Artist{id=77, name='Rubens}
+Artist{id=78, name='Ansel Adams}
+Artist{id=79, name='Dali}
+Artist{id=80, name='Magritte}
+Artist{id=81, name='Dali}
+Artist{id=82, name='Caravaggio}
+Artist{id=83, name='Monet}
+Artist{id=84, name='Gauguin}
+Artist{id=85, name='Chagall}
+Artist{id=86, name='Winslow Homer}
+Artist{id=87, name='Dali}
+Artist{id=88, name='Titian}
+Artist{id=89, name='Pissarro}
+Artist{id=90, name='Manet}
+Artist{id=91, name='Picasso}
+Artist{id=92, name='Durer}
+Artist{id=93, name='Raphael}
+Artist{id=94, name='Bernini}
+Artist{id=95, name='Botticelli}
+Artist{id=96, name='Botticelli}
+Artist{id=97, name='Klimt}
+Artist{id=98, name='Monet}
+Artist{id=99, name='Vettriano}
+Artist{id=100, name='Botticelli}
+
+	Artisti gasiti in baza de date cu numele dat: 
+Artist{id=45, name='Kahlo}
+Artist{id=54, name='Kahlo}
+Artist{id=72, name='Kahlo}
