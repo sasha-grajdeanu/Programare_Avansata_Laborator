@@ -141,3 +141,9 @@ Create the following components:
 - Implement all the DAO classes. (*solved*)
 - Use a connection pool in order to manage database connections, such as C3PO, HikariCP or Apache Commons DBCP. (*solved*)
 - Create a tool to import data from a real dataset, such as Rolling Stone's 500 Greatest Albums of All Time (or other). (*solved*)
+
+### Bonus
+
+- Extend the model in order to create playlists. A playlist has a name, a creation timestamp and a set of albums. (*solved*)
+- Two albums are related if they meet at least one of the following conditions: are composed by the same artist or have been released in the same year or have at least one common genre.
+Create an algorithm that generates maximal playlists (all of them or a limited number, if there are too many) that contain only unrelated albums. (*NO*)
