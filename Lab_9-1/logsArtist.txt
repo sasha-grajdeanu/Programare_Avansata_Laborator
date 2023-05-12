@@ -1,9 +1,4 @@
-
-
-	Execution time for finding all artists: 278 miliseconds
-	Timp de executie : 720 ms
-	Timp de executie : 720 ms
-	Timp de executie : 721 ms
-	Timp de executie : 81 ms
-	Timp de executie : 1613 ms
-	Timp de executie : 1347 ms
+	Timp de executie : 760 ms
+	Timp de executie : 456 ms
+	Timp de executie : 697 ms
+	Timp de executie : 356 ms

@@ -1,210 +1,211 @@
 	Artisti gasiti in baza de date: 
 Artist{id=1, name='Vincent}
-Artist{id=2, name='Manet}
-Artist{id=3, name='Titian}
-Artist{id=4, name='Donatello}
-Artist{id=5, name='Donatello}
-Artist{id=6, name='Botticelli}
-Artist{id=7, name='Ansel Adams}
-Artist{id=8, name='Degas}
-Artist{id=9, name='Pissarro}
-Artist{id=10, name='Durer}
-Artist{id=11, name='Edward Hopper}
-Artist{id=12, name='Klimt}
-Artist{id=13, name='Pissarro}
-Artist{id=14, name='Joan Miro}
-Artist{id=15, name='Titian}
-Artist{id=16, name='El Greco}
-Artist{id=17, name='Donatello}
-Artist{id=18, name='Escher}
-Artist{id=19, name='Ansel Adams}
-Artist{id=20, name='Edward Hopper}
-Artist{id=21, name='Dali}
-Artist{id=22, name='Caravaggio}
-Artist{id=23, name='Rubens}
-Artist{id=24, name='Pollock}
-Artist{id=25, name='Degas}
-Artist{id=26, name='Vincent}
-Artist{id=27, name='Titian}
-Artist{id=28, name='Durer}
-Artist{id=29, name='Joan Miro}
-Artist{id=30, name='Matisse}
-Artist{id=31, name='Klimt}
-Artist{id=32, name='Cassatt}
-Artist{id=33, name='Cezanne}
-Artist{id=34, name='Warhol}
-Artist{id=35, name='Monet}
-Artist{id=36, name='Vettriano}
-Artist{id=37, name='Kandinsky}
-Artist{id=38, name='Degas}
-Artist{id=39, name='Klimt}
-Artist{id=40, name='Chagall}
-Artist{id=41, name='Botticelli}
-Artist{id=42, name='Raphael}
-Artist{id=43, name='Titian}
-Artist{id=44, name='Gauguin}
-Artist{id=45, name='Ansel Adams}
-Artist{id=46, name='Matisse}
-Artist{id=47, name='Rembrandt}
-Artist{id=48, name='Rothko}
-Artist{id=49, name='Gauguin}
-Artist{id=50, name='Rubens}
-Artist{id=51, name='Degas}
-Artist{id=52, name='Renoir}
-Artist{id=53, name='Titian}
-Artist{id=54, name='Kandinsky}
-Artist{id=55, name='Winslow Homer}
-Artist{id=56, name='Winslow Homer}
-Artist{id=57, name='Renoir}
-Artist{id=58, name='Klimt}
-Artist{id=59, name='El Greco}
-Artist{id=60, name='Picasso}
-Artist{id=61, name='Winslow Homer}
-Artist{id=62, name='Durer}
-Artist{id=63, name='Matisse}
-Artist{id=64, name='Cezanne}
-Artist{id=65, name='Ansel Adams}
-Artist{id=66, name='El Greco}
-Artist{id=67, name='Kandinsky}
-Artist{id=68, name='Renoir}
-Artist{id=69, name='Diego Rivera}
-Artist{id=70, name='Magritte}
-Artist{id=71, name='Degas}
-Artist{id=72, name='Vettriano}
-Artist{id=73, name='Warhol}
-Artist{id=74, name='Bernini}
-Artist{id=75, name='Rothko}
-Artist{id=76, name='Klimt}
-Artist{id=77, name='Edward Hopper}
-Artist{id=78, name='Paul Klee}
-Artist{id=79, name='Titian}
-Artist{id=80, name='Vettriano}
-Artist{id=81, name='Botticelli}
-Artist{id=82, name='Titian}
-Artist{id=83, name='Kandinsky}
-Artist{id=84, name='Manet}
-Artist{id=85, name='Edward Hopper}
-Artist{id=86, name='Gauguin}
-Artist{id=87, name='Joan Miro}
-Artist{id=88, name='Diego Rivera}
-Artist{id=89, name='Joan Miro}
-Artist{id=90, name='Rembrandt}
-Artist{id=91, name='Raphael}
-Artist{id=92, name='Botticelli}
-Artist{id=93, name='Da Vinci}
-Artist{id=94, name='Seurat}
-Artist{id=95, name='Chagall}
-Artist{id=96, name='Monet}
-Artist{id=97, name='Ansel Adams}
-Artist{id=98, name='Chagall}
-Artist{id=99, name='Paul Klee}
-Artist{id=100, name='Monet}
-
-	Artisti gasiti in baza de date cu numele dat: 
-Artist{id=32, name='Cassatt}
-	Artisti gasiti in baza de date: 
-Artist{id=1, name='Kandinsky}
-Artist{id=2, name='Diego Rivera}
-Artist{id=3, name='Renoir}
-Artist{id=4, name='Winslow Homer}
-Artist{id=5, name='Warhol}
-Artist{id=6, name='Kandinsky}
-Artist{id=7, name='Joan Miro}
-Artist{id=8, name='Dali}
-Artist{id=9, name='Degas}
-Artist{id=10, name='Vincent}
-Artist{id=11, name='Cezanne}
-Artist{id=12, name='Botticelli}
-Artist{id=13, name='Warhol}
-Artist{id=14, name='Bernini}
-Artist{id=15, name='Pollock}
-Artist{id=16, name='Rothko}
+Artist{id=2, name='Escher}
+Artist{id=3, name='Ansel Adams}
+Artist{id=4, name='Chagall}
+Artist{id=5, name='Manet}
+Artist{id=6, name='Titian}
+Artist{id=7, name='Monet}
+Artist{id=8, name='Ansel Adams}
+Artist{id=9, name='Picasso}
+Artist{id=10, name='Klimt}
+Artist{id=11, name='Vincent}
+Artist{id=12, name='Cezanne}
+Artist{id=13, name='Klimt}
+Artist{id=14, name='Rothko}
+Artist{id=15, name='Michelangelo}
+Artist{id=16, name='Botticelli}
 Artist{id=17, name='Picasso}
-Artist{id=18, name='Rothko}
-Artist{id=19, name='Caravaggio}
-Artist{id=20, name='Manet}
-Artist{id=21, name='Da Vinci}
-Artist{id=22, name='Rothko}
-Artist{id=23, name='Michelangelo}
-Artist{id=24, name='Kahlo}
-Artist{id=25, name='Diego Rivera}
-Artist{id=26, name='Joan Miro}
-Artist{id=27, name='Monet}
-Artist{id=28, name='Da Vinci}
-Artist{id=29, name='Kahlo}
-Artist{id=30, name='Rubens}
+Artist{id=18, name='Rubens}
+Artist{id=19, name='Warhol}
+Artist{id=20, name='Edward Hopper}
+Artist{id=21, name='Winslow Homer}
+Artist{id=22, name='Dali}
+Artist{id=23, name='Cezanne}
+Artist{id=24, name='Caravaggio}
+Artist{id=25, name='Klimt}
+Artist{id=26, name='Manet}
+Artist{id=27, name='Diego Rivera}
+Artist{id=28, name='Botticelli}
+Artist{id=29, name='Titian}
+Artist{id=30, name='Dali}
 Artist{id=31, name='Vettriano}
-Artist{id=32, name='Manet}
-Artist{id=33, name='Rubens}
-Artist{id=34, name='Rembrandt}
-Artist{id=35, name='Botticelli}
-Artist{id=36, name='Cassatt}
-Artist{id=37, name='Da Vinci}
-Artist{id=38, name='Paul Klee}
-Artist{id=39, name='Bernini}
-Artist{id=40, name='Picasso}
-Artist{id=41, name='Chagall}
-Artist{id=42, name='Matisse}
-Artist{id=43, name='Picasso}
-Artist{id=44, name='Rothko}
-Artist{id=45, name='Seurat}
-Artist{id=46, name='Raphael}
-Artist{id=47, name='Donatello}
-Artist{id=48, name='Munch}
-Artist{id=49, name='Warhol}
-Artist{id=50, name='Durer}
-Artist{id=51, name='Botticelli}
-Artist{id=52, name='Kahlo}
-Artist{id=53, name='Munch}
-Artist{id=54, name='Munch}
-Artist{id=55, name='Cassatt}
-Artist{id=56, name='Michelangelo}
-Artist{id=57, name='El Greco}
-Artist{id=58, name='Munch}
-Artist{id=59, name='Pollock}
-Artist{id=60, name='Da Vinci}
-Artist{id=61, name='Donatello}
-Artist{id=62, name='Ansel Adams}
-Artist{id=63, name='Dali}
+Artist{id=32, name='Winslow Homer}
+Artist{id=33, name='Joan Miro}
+Artist{id=34, name='Michelangelo}
+Artist{id=35, name='Raphael}
+Artist{id=36, name='Botticelli}
+Artist{id=37, name='Ansel Adams}
+Artist{id=38, name='Titian}
+Artist{id=39, name='Seurat}
+Artist{id=40, name='Diego Rivera}
+Artist{id=41, name='Monet}
+Artist{id=42, name='Dali}
+Artist{id=43, name='Titian}
+Artist{id=44, name='Caravaggio}
+Artist{id=45, name='Munch}
+Artist{id=46, name='Escher}
+Artist{id=47, name='Monet}
+Artist{id=48, name='Michelangelo}
+Artist{id=49, name='Joan Miro}
+Artist{id=50, name='Renoir}
+Artist{id=51, name='Escher}
+Artist{id=52, name='Winslow Homer}
+Artist{id=53, name='Matisse}
+Artist{id=54, name='Picasso}
+Artist{id=55, name='Picasso}
+Artist{id=56, name='Renoir}
+Artist{id=57, name='Da Vinci}
+Artist{id=58, name='Seurat}
+Artist{id=59, name='Da Vinci}
+Artist{id=60, name='Vincent}
+Artist{id=61, name='Winslow Homer}
+Artist{id=62, name='Kandinsky}
+Artist{id=63, name='Edward Hopper}
 Artist{id=64, name='Seurat}
-Artist{id=65, name='Seurat}
-Artist{id=66, name='Raphael}
-Artist{id=67, name='Escher}
-Artist{id=68, name='Monet}
-Artist{id=69, name='Picasso}
-Artist{id=70, name='Degas}
-Artist{id=71, name='Monet}
-Artist{id=72, name='Bernini}
-Artist{id=73, name='Kandinsky}
-Artist{id=74, name='Gauguin}
-Artist{id=75, name='Botticelli}
-Artist{id=76, name='Cezanne}
-Artist{id=77, name='Rothko}
-Artist{id=78, name='Degas}
-Artist{id=79, name='Vincent}
-Artist{id=80, name='Ansel Adams}
-Artist{id=81, name='Kahlo}
-Artist{id=82, name='Raphael}
-Artist{id=83, name='Kahlo}
-Artist{id=84, name='Vettriano}
-Artist{id=85, name='Rothko}
-Artist{id=86, name='Edward Hopper}
-Artist{id=87, name='Vincent}
-Artist{id=88, name='Joan Miro}
-Artist{id=89, name='Titian}
-Artist{id=90, name='Botticelli}
-Artist{id=91, name='Bernini}
-Artist{id=92, name='Munch}
-Artist{id=93, name='Cassatt}
-Artist{id=94, name='Diego Rivera}
-Artist{id=95, name='Vettriano}
-Artist{id=96, name='Donatello}
-Artist{id=97, name='Picasso}
-Artist{id=98, name='Paul Klee}
-Artist{id=99, name='Matisse}
-Artist{id=100, name='Donatello}
+Artist{id=65, name='Donatello}
+Artist{id=66, name='Escher}
+Artist{id=67, name='Durer}
+Artist{id=68, name='Bernini}
+Artist{id=69, name='Caravaggio}
+Artist{id=70, name='Titian}
+Artist{id=71, name='Rothko}
+Artist{id=72, name='Degas}
+Artist{id=73, name='Rothko}
+Artist{id=74, name='Monet}
+Artist{id=75, name='Pissarro}
+Artist{id=76, name='Vettriano}
+Artist{id=77, name='Magritte}
+Artist{id=78, name='Seurat}
+Artist{id=79, name='Renoir}
+Artist{id=80, name='Warhol}
+Artist{id=81, name='Rubens}
+Artist{id=82, name='Durer}
+Artist{id=83, name='Dali}
+Artist{id=84, name='Degas}
+Artist{id=85, name='Gauguin}
+Artist{id=86, name='Picasso}
+Artist{id=87, name='Winslow Homer}
+Artist{id=88, name='Matisse}
+Artist{id=89, name='Rembrandt}
+Artist{id=90, name='Vettriano}
+Artist{id=91, name='Picasso}
+Artist{id=92, name='Da Vinci}
+Artist{id=93, name='Diego Rivera}
+Artist{id=94, name='Munch}
+Artist{id=95, name='Diego Rivera}
+Artist{id=96, name='Escher}
+Artist{id=97, name='Bernini}
+Artist{id=98, name='Cezanne}
+Artist{id=99, name='Dali}
+Artist{id=100, name='Joan Miro}
 
 	Artisti gasiti in baza de date cu numele dat: 
-Artist{id=36, name='Cassatt}
+Artist{id=45, name='Munch}
+Artist{id=94, name='Munch}
+	Artisti gasiti in baza de date: 
+Artist{id=1, name='Magritte}
+Artist{id=2, name='Vincent}
+Artist{id=3, name='Kandinsky}
+Artist{id=4, name='Matisse}
+Artist{id=5, name='Kahlo}
+Artist{id=6, name='Escher}
+Artist{id=7, name='Caravaggio}
+Artist{id=8, name='Pissarro}
+Artist{id=9, name='Durer}
+Artist{id=10, name='Escher}
+Artist{id=11, name='Matisse}
+Artist{id=12, name='Diego Rivera}
+Artist{id=13, name='Degas}
+Artist{id=14, name='Raphael}
+Artist{id=15, name='Michelangelo}
+Artist{id=16, name='Diego Rivera}
+Artist{id=17, name='Seurat}
+Artist{id=18, name='Vincent}
+Artist{id=19, name='Winslow Homer}
+Artist{id=20, name='Joan Miro}
+Artist{id=21, name='Caravaggio}
+Artist{id=22, name='Ansel Adams}
+Artist{id=23, name='Magritte}
+Artist{id=24, name='Picasso}
+Artist{id=25, name='Vincent}
+Artist{id=26, name='Diego Rivera}
+Artist{id=27, name='Vincent}
+Artist{id=28, name='Joan Miro}
+Artist{id=29, name='Paul Klee}
+Artist{id=30, name='Durer}
+Artist{id=31, name='Joan Miro}
+Artist{id=32, name='Munch}
+Artist{id=33, name='Paul Klee}
+Artist{id=34, name='Winslow Homer}
+Artist{id=35, name='Picasso}
+Artist{id=36, name='Ansel Adams}
+Artist{id=37, name='Rubens}
+Artist{id=38, name='Matisse}
+Artist{id=39, name='Monet}
+Artist{id=40, name='Paul Klee}
+Artist{id=41, name='Seurat}
+Artist{id=42, name='Kahlo}
+Artist{id=43, name='Paul Klee}
+Artist{id=44, name='Rubens}
+Artist{id=45, name='Titian}
+Artist{id=46, name='Cezanne}
+Artist{id=47, name='Ansel Adams}
+Artist{id=48, name='Manet}
+Artist{id=49, name='Kahlo}
+Artist{id=50, name='Manet}
+Artist{id=51, name='Kandinsky}
+Artist{id=52, name='Rothko}
+Artist{id=53, name='Pollock}
+Artist{id=54, name='El Greco}
 Artist{id=55, name='Cassatt}
-Artist{id=93, name='Cassatt}
+Artist{id=56, name='Donatello}
+Artist{id=57, name='Michelangelo}
+Artist{id=58, name='Matisse}
+Artist{id=59, name='Rothko}
+Artist{id=60, name='Munch}
+Artist{id=61, name='Cezanne}
+Artist{id=62, name='Matisse}
+Artist{id=63, name='Cezanne}
+Artist{id=64, name='Donatello}
+Artist{id=65, name='Chagall}
+Artist{id=66, name='El Greco}
+Artist{id=67, name='Renoir}
+Artist{id=68, name='Donatello}
+Artist{id=69, name='Warhol}
+Artist{id=70, name='Kandinsky}
+Artist{id=71, name='Warhol}
+Artist{id=72, name='Warhol}
+Artist{id=73, name='Dali}
+Artist{id=74, name='Chagall}
+Artist{id=75, name='Kahlo}
+Artist{id=76, name='Renoir}
+Artist{id=77, name='Rubens}
+Artist{id=78, name='Degas}
+Artist{id=79, name='Vettriano}
+Artist{id=80, name='Monet}
+Artist{id=81, name='Joan Miro}
+Artist{id=82, name='Kahlo}
+Artist{id=83, name='Winslow Homer}
+Artist{id=84, name='Paul Klee}
+Artist{id=85, name='Monet}
+Artist{id=86, name='Dali}
+Artist{id=87, name='Pissarro}
+Artist{id=88, name='Vincent}
+Artist{id=89, name='Edward Hopper}
+Artist{id=90, name='Da Vinci}
+Artist{id=91, name='Vettriano}
+Artist{id=92, name='Munch}
+Artist{id=93, name='Magritte}
+Artist{id=94, name='Warhol}
+Artist{id=95, name='Titian}
+Artist{id=96, name='Seurat}
+Artist{id=97, name='Manet}
+Artist{id=98, name='Magritte}
+Artist{id=99, name='Joan Miro}
+Artist{id=100, name='Titian}
+
+	Artisti gasiti in baza de date cu numele dat: 
+Artist{id=48, name='Manet}
+Artist{id=50, name='Manet}
+Artist{id=97, name='Manet}

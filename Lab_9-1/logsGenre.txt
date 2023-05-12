@@ -1,2 +1,2 @@
-	TImp de executie: 549 ms
-	Timp de executie : 443 ms
+	TImp de executie: 211 ms
+	Timp de executie : 27 ms

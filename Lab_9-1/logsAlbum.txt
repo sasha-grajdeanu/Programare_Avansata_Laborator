@@ -1,8 +1,2 @@
-
-
-	Execution time for finding the album with id=: 594 miliseconds
-
-
-	Timp de executie: 5524 ms
-	Timp de executie: 8 | 537 ms
-	Timp de executie: 31 | 834 ms
+	Timp de executie: 29 | 582 ms
+	Timp de executie: 8 | 475 ms
