@@ -30,12 +30,19 @@ public class ClientThread extends Thread {
                 BufferedReader input = new BufferedReader(new InputStreamReader(socket.getInputStream()));
                 String request = input.readLine();
                 PrintWriter output = new PrintWriter(socket.getOutputStream());
-                if (request.equals("stop")) {
-                    String respond = "Server stopped";
+                if (request.equals("exit")) {
+                    String respond = "Connexion ended...";
                     output.println(respond);
                     output.flush();
                     break;
-                } else {
+                }
+                else if(request.equals("stop")){
+                    String respond = "Server stopped";
+                    output.println(respond);
+                    output.flush();
+                    System.exit(0);
+                }
+                else {
                     String respond = "Server received the request...";
                     output.println(respond);
                     output.flush();

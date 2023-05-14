@@ -39,6 +39,9 @@ public class GameClient {
                 output.println(command);
                 String response = in.readLine();
                 System.out.println(response);
+                if (command.equals("exit")) {
+                    break;
+                }
                 if (command.equals("stop")) {
                     break;
                 }
