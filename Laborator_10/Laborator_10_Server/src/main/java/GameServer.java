@@ -1,28 +1,31 @@
+import Utilities.Game;
+
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.util.ArrayList;
 
-/**
- * this class is responsible with the creating connexion between client and server
- */
 public class GameServer {
-    public static final int PORT = 2504;
-    public GameServer() throws IOException {
-        ServerSocket serverSocket = null;
+    private static int port = 2504;
+    private static ArrayList<Game> games = new ArrayList<>();
 
-        try{
-            serverSocket = new ServerSocket(PORT);
-            while(true){
-                System.out.println("Asteptam la portul 2504...");
-                Socket socket = serverSocket.accept();
-                new ClientThread(socket).start();
+    /**
+     * this method is responsible to create the connection between clients and server
+     * @param args
+     */
+    public static void main(String[] args) {
+        try (ServerSocket serverSocket = new ServerSocket(port)) {
+            System.out.println("Asteptam la portul " + port);
+
+            while (true) {
+                Socket clientSocket = serverSocket.accept();
+
+                ClientThread clientThread = new ClientThread(clientSocket, games);
+                clientThread.start();
             }
-
         } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-        finally {
-            serverSocket.close();
+            System.out.println("Eroare: " + e.getMessage());
+            System.exit(1);
         }
     }
 }

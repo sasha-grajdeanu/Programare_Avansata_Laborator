@@ -3,51 +3,40 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.Socket;
-import java.net.UnknownHostException;
 import java.util.Scanner;
 
 /**
- * this class is responsible with communication between client and server
+ * this class is responsible to create a connection to the server and sending command and receive message from the server
  */
-public class GameClient {
-    String serverAddress = "127.0.0.1";
-    int PORT = 2504;
+public class GameClient{
+    private static final String SERVER_HOST = "127.0.0.1";
+    private static final int SERVER_PORT = 2504;
 
-    public GameClient() {
+    public static void main(String[] args) {
+        try (Socket socket = new Socket(SERVER_HOST, SERVER_PORT);
+             PrintWriter out = new PrintWriter(socket.getOutputStream(), true);
+             BufferedReader in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+             ) {
 
-    }
-
-    /**
-     * this method create a connexion to server
-     * <p>
-     * the client reads a command from keyboard and sending this command to server
-     * <p>
-     * after, client receive a message from the server and print on console
-     * <p>
-     * if the command was stop, connexion is off
-     *
-     * @throws IOException
-     */
-    public void execute() throws IOException {
-        Socket socket = new Socket(serverAddress, PORT);
-        try {
+            System.out.println("Conexiune realizata");
+            String userInput;
+            String mesaj;
             while (true) {
-                PrintWriter output = new PrintWriter(socket.getOutputStream(), true);
-                BufferedReader in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
-                Scanner scanner = new Scanner(System.in);
-                String command = scanner.nextLine();
-                output.println(command);
-                String response = in.readLine();
-                System.out.println(response);
-                if (command.equals("exit")) {
-                    break;
+                if((mesaj = in.readLine() )!= null){
+                    System.out.println(mesaj);
                 }
-                if (command.equals("stop")) {
+                Scanner scanner = new Scanner(System.in);
+                userInput = scanner.nextLine();
+                out.println(userInput);
+                String serverResponse = in.readLine();
+                System.out.println(serverResponse);
+                if (userInput.equals("exit")) {
                     break;
                 }
             }
-        } catch (UnknownHostException e) {
-            System.err.println("No server on..." + e);
+        } catch (IOException e) {
+            System.out.println("Error in game client: " + e.getMessage());
+            System.exit(1);
         }
     }
 }
