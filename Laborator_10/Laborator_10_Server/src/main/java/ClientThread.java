@@ -80,10 +80,13 @@ public class ClientThread extends Thread {
                                     out.println("AI CASTIGAT");
                                     sendToPairedPlayer("Adversarul a castigat. Mutarea castigatoare a fost" + linie + " " + coloana);
                                     currentGame = null;
+                                    reset(nume);
+
                                 } else if (currentGame.getBoard().completeBoard()) {
                                     out.println("REMIZA");
                                     sendToPairedPlayer("REMIZA. Mutarea castigatoare a fost" + linie + " " + coloana);
                                     currentGame = null;
+                                    reset(nume);
                                 } else {
                                     out.println("Mutare efectuata");
                                     sendToPairedPlayer("Adversarul a mutat la pozitia " + linie + ", " + coloana);
@@ -106,7 +109,9 @@ public class ClientThread extends Thread {
                         break;
                     case "exit":
                         out.println("SERVER OPRIT");
-                        sendToPairedPlayer(" ");
+                        out.println(" ");
+                        currentGame = null;
+                        reset(nume);
                         return;
                     default:
                         out.println("COMANDA INVALIDA");
@@ -137,6 +142,14 @@ public class ClientThread extends Thread {
             }
         }
         return null;
+    }
+
+    private void reset(String name){
+        for (Game game : games) {
+            if (Objects.equals(game.getNume(), nume)) {
+                games.remove(game);
+            }
+        }
     }
 
     /**

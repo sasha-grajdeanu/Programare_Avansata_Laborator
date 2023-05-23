@@ -31,11 +31,11 @@ public class GameClient{
                 String serverResponse = in.readLine();
                 System.out.println(serverResponse);
                 if (userInput.equals("exit")) {
-                    break;
+                    System.exit(0);
                 }
             }
         } catch (IOException e) {
-            System.out.println("Error in game client: " + e.getMessage());
+            System.out.println("Eroare: " + e.getMessage());
             System.exit(1);
         }
     }
