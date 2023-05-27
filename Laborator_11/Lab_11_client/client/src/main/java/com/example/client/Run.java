@@ -37,7 +37,7 @@ public class Run implements CommandLineRunner {
     private void addPlayerInGame(String name, int id) {
         String url = URL + "/games/modify/{gameName}?id={playerId}";
         restTemplate.put(url, null, name, id);
-        System.out.println("Added Player with ID " + id + " to Game: " + name);
+        System.out.println("S-A ADAUGAT JUCATORUL CU ID " + id + " IN JOCUL : " + name);
     }
 
     /**
