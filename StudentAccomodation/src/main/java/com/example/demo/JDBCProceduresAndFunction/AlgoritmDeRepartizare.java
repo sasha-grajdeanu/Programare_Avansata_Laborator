@@ -159,175 +159,12 @@ public class AlgoritmDeRepartizare {
     public void repartitie() throws SQLException {
         sortare();
         impartireLocuri();
-        for (Student student1 : studentiAnIntaiM) {
-            if (locuri1M != 0) {
-                int verificare = locuri1M;
-                int id_student = student1.getId();
-                for (Map.Entry<Integer, List<Integer>> e : preferencies.entrySet()) {
-                    if (e.getKey() == id_student) {
-                        for (int i = 0; i < e
-                                .getValue().size(); i++) {
-                            for (Map.Entry<Integer, Integer> camines : locuriAnIntaiM.entrySet()) {
-                                if (Objects.equals(e.getValue().get(i), camines.getKey())) {
-                                    if (camines.getValue() != 0) {
-                                        repartizare.put(id_student, camines.getKey());
-                                        System.out.println("O INCERCARE " + id_student + " " + camines.getKey());
-                                        locuriAnIntaiM.put(camines.getKey(), camines.getValue() - 1);
-                                        locuri1M--;
-                                        break;
-                                    }
-                                }
-                            }
-                            if (locuri1M < verificare) {
-                                break;
-                            }
-                        }
-                        break;
-                    }
-                }
-            } else {
-                break;
-            }
-        }
-        for (Student student1 : studentiAnDoiM) {
-            if (locuri2M != 0) {
-                int verificare = locuri2M;
-                int id_student = student1.getId();
-                for (Map.Entry<Integer, List<Integer>> e : preferencies.entrySet()) {
-                    if (e.getKey() == id_student) {
-                        for (int i = 0; i < e.getValue().size(); i++) {
-                            for (Map.Entry<Integer, Integer> camines : locuriAnDoiM.entrySet()) {
-                                if (e.getValue().get(i) == camines.getKey()) {
-                                    if (camines.getValue() != 0) {
-                                        repartizare.put(id_student, camines.getKey());
-                                        System.out.println(id_student + " " + camines.getKey());
-                                        locuriAnDoiM.put(camines.getKey(), camines.getValue() - 1);
-                                        locuri2M--;
-                                        break;
-                                    }
-                                }
-                            }
-                            if (locuri2M < verificare) {
-                                break;
-                            }
-                        }
-                        break;
-                    }
-                }
-            } else {
-                break;
-            }
-        }
-        for (Student student1 : studentiAnTreiM) {
-            if (locuri3M != 0) {
-                int verificare = locuri3M;
-                int id_student = student1.getId();
-                for (Map.Entry<Integer, List<Integer>> e : preferencies.entrySet()) {
-                    if (e.getKey() == id_student) {
-                        for (int i = 0; i < e.getValue().size(); i++) {
-                            for (Map.Entry<Integer, Integer> camines : locuriAnTreiM.entrySet()) {
-                                if (e.getValue().get(i) == camines.getKey()) {
-                                    if (camines.getValue() != 0) {
-                                        repartizare.put(id_student, camines.getKey());
-                                        System.out.println(id_student + " " + camines.getKey());
-                                        locuriAnTreiM.put(camines.getKey(), camines.getValue() - 1);
-                                        locuri3M--;
-                                        break;
-                                    }
-                                }
-                            }
-                            if (locuri3M < verificare) {
-                                break;
-                            }
-                        }
-                        break;
-                    }
-                }
-            } else {
-                break;
-            }
-        }
-        for (Student student1 : studentiAnIntaiF) {
-            if (locuri1F != 0) {
-                int verificare = locuri1F;
-                int id_student = student1.getId();
-                for (Map.Entry<Integer, List<Integer>> e : preferencies.entrySet()) {
-                    if (e.getKey() == id_student) {
-                        for (int i = 0; i < e.getValue().size(); i++) {
-                            for (Map.Entry<Integer, Integer> camines : locuriAnIntaiF.entrySet()) {
-                                if (e.getValue().get(i) == camines.getKey()) {
-                                    if (camines.getValue() != 0) {
-                                        repartizare.put(id_student, camines.getKey());
-                                        System.out.println(id_student + " " + camines.getKey());
-                                        locuriAnIntaiF.put(camines.getKey(), camines.getValue() - 1);
-                                        locuri1F--;
-                                        break;
-                                    }
-                                }
-                            }
-                            if (locuri1F < verificare) {
-                                break;
-                            }
-                        }
-                        break;
-                    }
-                }
-            }
-        }
-        for (Student student1 : studentiAnDoiF) {
-            if (locuri2F != 0) {
-                int verificare = locuri2F;
-                int id_student = student1.getId();
-                for (Map.Entry<Integer, List<Integer>> e : preferencies.entrySet()) {
-                    if (e.getKey() == id_student) {
-                        for (int i = 0; i < e.getValue().size(); i++) {
-                            for (Map.Entry<Integer, Integer> camines : locuriAnDoiF.entrySet()) {
-                                if (e.getValue().get(i) == camines.getKey()) {
-                                    if (camines.getValue() != 0) {
-                                        repartizare.put(id_student, camines.getKey());
-                                        System.out.println(id_student + " " + camines.getKey());
-                                        locuriAnDoiF.put(camines.getKey(), camines.getValue() - 1);
-                                        locuri2F--;
-                                        break;
-                                    }
-                                }
-                            }
-                            if (locuri2F < verificare) {
-                                break;
-                            }
-                        }
-                        break;
-                    }
-                }
-            }
-        }
-        for (Student student1 : studentiAnTreiF) {
-            if (locuri3F != 0) {
-                int verificare = locuri3F;
-                int id_student = student1.getId();
-                for (Map.Entry<Integer, List<Integer>> e : preferencies.entrySet()) {
-                    if (e.getKey() == id_student) {
-                        for (int i = 0; i < e.getValue().size(); i++) {
-                            for (Map.Entry<Integer, Integer> camines : locuriAnTreiF.entrySet()) {
-                                if (e.getValue().get(i) == camines.getKey()) {
-                                    if (camines.getValue() != 0) {
-                                        repartizare.put(id_student, camines.getKey());
-                                        System.out.println(id_student + " " + camines.getKey());
-                                        locuriAnTreiF.put(camines.getKey(), camines.getValue() - 1);
-                                        locuri3F--;
-                                        break;
-                                    }
-                                }
-                            }
-                            if (locuri3F < verificare) {
-                                break;
-                            }
-                        }
-                        break;
-                    }
-                }
-            }
-        }
+        completeRoom(studentiAnIntaiM, locuri1M, locuriAnIntaiM);
+        completeRoom(studentiAnDoiM, locuri2M, locuriAnDoiM);
+        completeRoom(studentiAnTreiM, locuri3M, locuriAnTreiM);
+        completeRoom(studentiAnIntaiF, locuri1F, locuriAnIntaiF);
+        completeRoom(studentiAnDoiF, locuri2F, locuriAnDoiF);
+        completeRoom(studentiAnTreiF, locuri3F, locuriAnTreiF);
         insertInDatabase();
     }
 
@@ -347,6 +184,38 @@ public class AlgoritmDeRepartizare {
             }
         } catch (SQLException e) {
             e.printStackTrace();
+        }
+    }
+
+    private void completeRoom(List<Student> studentiAn, int locuri, Map<Integer, Integer> locuriDate){
+        for (Student student1 : studentiAn) {
+            if (locuri != 0) {
+                int verificare = locuri;
+                int id_student = student1.getId();
+                for (Map.Entry<Integer, List<Integer>> e : preferencies.entrySet()) {
+                    if (e.getKey() == id_student) {
+                        for (int i = 0; i < e.getValue().size(); i++) {
+                            for (Map.Entry<Integer, Integer> camines : locuriDate.entrySet()) {
+                                if (e.getValue().get(i) == camines.getKey()) {
+                                    if (camines.getValue() != 0) {
+                                        repartizare.put(id_student, camines.getKey());
+                                        System.out.println(id_student + " " + camines.getKey());
+                                        locuriDate.put(camines.getKey(), camines.getValue() - 1);
+                                        locuri--;
+                                        break;
+                                    }
+                                }
+                            }
+                            if (locuri < verificare) {
+                                break;
+                            }
+                        }
+                        break;
+                    }
+                }
+            } else {
+                break;
+            }
         }
     }
 }
