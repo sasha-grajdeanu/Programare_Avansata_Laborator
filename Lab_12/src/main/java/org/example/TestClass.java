@@ -6,6 +6,12 @@ import java.lang.reflect.Method;
 import java.lang.reflect.Modifier;
 
 public class TestClass {
+    /**
+     * load the class and print info. about the class and runt the test
+     *
+     * @param nume
+     * @throws ClassNotFoundException
+     */
     public void execute(String nume) throws ClassNotFoundException {
         Class clasa = Class.forName(nume);
         Package pachet = clasa.getPackage();

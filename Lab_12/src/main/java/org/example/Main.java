@@ -1,7 +1,5 @@
 package org.example;
 
-import java.net.MalformedURLException;
-
 public class Main {
     public static void main(String[] args) {
         System.out.println("Hello world!");
@@ -11,5 +9,8 @@ public class Main {
         } catch (ClassNotFoundException e) {
             throw new RuntimeException(e);
         }
+
+        Homework homework = new Homework();
+        homework.execute("D:\\B2-Company-Back-End\\target\\classes\\com\\b2\\controllers");
     }
 }
