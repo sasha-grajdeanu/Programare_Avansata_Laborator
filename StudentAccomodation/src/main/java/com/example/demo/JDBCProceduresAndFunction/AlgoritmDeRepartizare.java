@@ -19,11 +19,11 @@ import static java.lang.Math.round;
 @Data
 @Repository
 public class AlgoritmDeRepartizare {
-    List<Student> student;
-    List<Camin> camins;
+    List<Student> students;
+    List<Camin> campus;
     Map<Integer, List<Integer>> preferencies;
 
-    Map<Integer, Integer> repartizare = new HashMap<>();
+    Map<Integer, Integer> repartition = new HashMap<>();
 
     int locuri1M = 0;
     int locuri2M = 0;
@@ -60,18 +60,38 @@ public class AlgoritmDeRepartizare {
         this.preferenciesOfStudent = preferenciesOfStudent;
     }
 
-    public void sortare() throws SQLException {
+    private void reset()
+    {
+        locuri1M = 0;
+        locuri2M = 0;
+        locuri3M = 0;
+        locuri1F = 0;
+        locuri2F = 0;
+        locuri3F = 0;
         studentiAnIntaiM.clear();
         studentiAnIntaiF.clear();
         studentiAnDoiF.clear();
         studentiAnDoiM.clear();
         studentiAnTreiM.clear();
         studentiAnTreiF.clear();
-        repartizare.clear();
-        this.student = listOfStudent.studentiInscrisi();
-        this.camins = listOfCamine.camineDate();
+        locuriAnIntaiM.clear();
+        locuriAnIntaiF.clear();
+        locuriAnDoiM.clear();
+        locuriAnDoiF.clear();
+        locuriAnTreiM.clear();
+        locuriAnTreiF.clear();
+        repartition.clear();
+        students.clear();
+        campus.clear();
+        preferencies.clear();
+    }
+
+    public void sortare() throws SQLException {
+        this.reset();
+        this.students = listOfStudent.studentiInscrisi();
+        this.campus = listOfCamine.camineDate();
         this.preferencies = preferenciesOfStudent.preferinteleStudentilor();
-        for (Student student1 : this.student) {
+        for (Student student1 : this.students) {
             System.out.println(student1.toString());
             if (student1.getAn() == An.LICENTA_1) {
                 if (student1.getGen() == Gen.MASCULIN) {
@@ -112,7 +132,7 @@ public class AlgoritmDeRepartizare {
         System.out.println("nrs" + studentiM);
         int studentiF = this.studentiAnTreiF.size() + this.studentiAnIntaiF.size() + this.studentiAnDoiF.size();
         System.out.println(studentiF);
-        for (Camin camin : camins) {
+        for (Camin camin : campus) {
             System.out.println(camin.toString());
             if (camin.getCapacitateM() != 0) {
                 int loc1M = round(camin.getCapacitateM() * ((float) this.studentiAnIntaiM.size() / studentiM));
@@ -128,24 +148,24 @@ public class AlgoritmDeRepartizare {
                 int loc3M = round(camin.getCapacitateM() * ((float) this.studentiAnTreiM.size() / studentiM));
                 System.out.println(loc3M + " " + loc3M);
                 locuriAnTreiM.put(camin.getId(), loc3M);
-                locuri3M =  (locuri3M + loc3M);
+                locuri3M = (locuri3M + loc3M);
                 System.out.println(locuri3M);
             }
             if (camin.getCapacitateF() != 0) {
                 int loc1M = round(camin.getCapacitateF() * ((float) this.studentiAnIntaiF.size() / studentiF));
-                System.out.println(loc1M + " " +  loc1M);
-                locuriAnIntaiF.put(camin.getId(),  loc1M);
-                locuri1F =  (locuri1F + loc1M);
+                System.out.println(loc1M + " " + loc1M);
+                locuriAnIntaiF.put(camin.getId(), loc1M);
+                locuri1F = (locuri1F + loc1M);
                 System.out.println(locuri1F);
                 int loc2M = round(camin.getCapacitateF() * ((float) this.studentiAnDoiF.size() / studentiF));
-                System.out.println(loc2M + " " +  loc2M);
+                System.out.println(loc2M + " " + loc2M);
                 locuriAnDoiF.put(camin.getId(), loc2M);
                 locuri2F = (locuri2F + loc2M);
                 System.out.println(locuri2F);
                 int loc3M = round(camin.getCapacitateF() * ((float) this.studentiAnTreiF.size() / studentiF));
                 System.out.println(loc3M + " " + loc3M);
-                locuriAnTreiF.put(camin.getId(),  loc3M);
-                locuri3F =  (locuri3F + loc3M);
+                locuriAnTreiF.put(camin.getId(), loc3M);
+                locuri3F = (locuri3F + loc3M);
                 System.out.println(locuri3F);
             }
         }
@@ -156,8 +176,13 @@ public class AlgoritmDeRepartizare {
         }
     }
 
-    public void repartitie() throws SQLException {
-        sortare();
+    public boolean repartitie(){
+        try {
+            sortare();
+        } catch (SQLException e) {
+            System.err.println(e.getMessage());
+            return false;
+        }
         impartireLocuri();
         completeRoom(studentiAnIntaiM, locuri1M, locuriAnIntaiM);
         completeRoom(studentiAnDoiM, locuri2M, locuriAnDoiM);
@@ -165,29 +190,31 @@ public class AlgoritmDeRepartizare {
         completeRoom(studentiAnIntaiF, locuri1F, locuriAnIntaiF);
         completeRoom(studentiAnDoiF, locuri2F, locuriAnDoiF);
         completeRoom(studentiAnTreiF, locuri3F, locuriAnTreiF);
-        insertInDatabase();
-    }
-
-    private void insertInDatabase() {
-        try (Connection connection = dataSource.getConnection()) {
-            try (PreparedStatement deleteStatement = connection.prepareStatement("DELETE FROM REPARTIZARE")) {
-                int deletedRows = deleteStatement.executeUpdate();
-                System.out.println("Executat");
-            }
-            for (Map.Entry<Integer, Integer> repartitii : repartizare.entrySet()) {
-                try (PreparedStatement preparedStatement = connection.prepareStatement("insert into REPARTIZARE (ID_STUDENT, ID_CAMIN) values (?, ?)")) {
-                    preparedStatement.setInt(1, repartitii.getKey());
-                    preparedStatement.setInt(2, repartitii.getValue());
-                    int val = preparedStatement.executeUpdate();
-                    System.out.println(val);
-                }
-            }
+        try {
+            insertInDatabase();
         } catch (SQLException e) {
-            e.printStackTrace();
+            System.err.println(e.getMessage());
+            return false;
         }
+        return true;
     }
 
-    private void completeRoom(List<Student> studentiAn, int locuri, Map<Integer, Integer> locuriDate){
+    private void insertInDatabase() throws SQLException {
+        Connection connection = dataSource.getConnection();
+        PreparedStatement deleteStatement = connection.prepareStatement("DELETE FROM REPARTIZARE");
+        deleteStatement.executeUpdate();
+        for (Map.Entry<Integer, Integer> repartitii : repartition.entrySet()) {
+            try (PreparedStatement preparedStatement = connection.prepareStatement("insert into REPARTIZARE (ID_STUDENT, ID_CAMIN) values (?, ?)")) {
+                preparedStatement.setInt(1, repartitii.getKey());
+                preparedStatement.setInt(2, repartitii.getValue());
+                preparedStatement.executeUpdate();
+            }
+        }
+        deleteStatement.close();
+        connection.close();
+    }
+
+    private void completeRoom(List<Student> studentiAn, int locuri, Map<Integer, Integer> locuriDate) {
         for (Student student1 : studentiAn) {
             if (locuri != 0) {
                 int verificare = locuri;
@@ -198,7 +225,7 @@ public class AlgoritmDeRepartizare {
                             for (Map.Entry<Integer, Integer> camines : locuriDate.entrySet()) {
                                 if (e.getValue().get(i) == camines.getKey()) {
                                     if (camines.getValue() != 0) {
-                                        repartizare.put(id_student, camines.getKey());
+                                        repartition.put(id_student, camines.getKey());
                                         System.out.println(id_student + " " + camines.getKey());
                                         locuriDate.put(camines.getKey(), camines.getValue() - 1);
                                         locuri--;

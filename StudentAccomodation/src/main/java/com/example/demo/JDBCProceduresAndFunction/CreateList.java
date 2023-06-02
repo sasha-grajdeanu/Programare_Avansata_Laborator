@@ -19,15 +19,13 @@ public class CreateList {
 
     public boolean callLista() {
         try (Connection connection = dataSource.getConnection()) {
-            System.out.println("intrat");
-            CallableStatement statement = connection.prepareCall("{call lista_repartizare}");
-            System.out.println("scris");
+            CallableStatement statement = connection.prepareCall("{call lista_repartizare()}");
             statement.execute();
-            System.out.println("executat");
-            return true;
+            statement.close();
         } catch (SQLException e) {
             e.printStackTrace();
+            return false;
         }
-        return false;
+        return true;
     }
 }

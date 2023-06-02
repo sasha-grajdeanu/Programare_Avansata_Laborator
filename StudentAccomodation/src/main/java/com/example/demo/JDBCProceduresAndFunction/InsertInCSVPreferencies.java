@@ -18,11 +18,8 @@ public class InsertInCSVPreferencies {
 
     public boolean callInsertPreferencies(){
         try(Connection connection = dataSource.getConnection()){
-            System.out.println("intrat");
-            CallableStatement statement  = connection.prepareCall("{call insert_preferinte}");
-            System.out.println("scris");
+            CallableStatement statement  = connection.prepareCall("{call insert_preferinte()}");
             statement.execute();
-            System.out.println("executat");
             return true;
         }catch (SQLException e){
             e.printStackTrace();

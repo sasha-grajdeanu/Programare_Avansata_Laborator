@@ -20,7 +20,7 @@ public class InsertInCSVLocuri {
     public boolean callInsertInCamine() {
         try (Connection connection = dataSource.getConnection()) {
             System.out.println("intrat");
-            CallableStatement statement = connection.prepareCall("{call insert_in_camine}");
+            CallableStatement statement = connection.prepareCall("{call insert_in_camine()}");
             System.out.println("scris");
             statement.execute();
             System.out.println("executat");

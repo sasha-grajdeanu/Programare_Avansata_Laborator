@@ -1,6 +1,9 @@
 package com.example.demo.Controllers;
 
+import com.example.demo.CsvToPdf;
 import com.example.demo.JDBCProceduresAndFunction.CreateList;
+import com.itextpdf.text.DocumentException;
+import com.opencsv.exceptions.CsvValidationException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.FileSystemResource;
 import org.springframework.http.HttpHeaders;
@@ -10,39 +13,37 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.io.File;
+import java.io.IOException;
 
 @RestController
 public class GetListController {
 
-    private CreateList createList;
+    private final CreateList createList;
 
     @Autowired
     public GetListController(CreateList createList) {
         this.createList = createList;
     }
 
-    @GetMapping("/repartizare")
+    @GetMapping("/lists")
     public ResponseEntity<FileSystemResource> downloadFile() {
-
         boolean success = createList.callLista();
         if (success) {
             String path = "D:\\REPARTITIE\\lista_repartitie.csv";
-
-            File file = new File(path);
-
+            CsvToPdf csvToPdf = new CsvToPdf();
+            try {
+                csvToPdf.convert(path);
+            } catch (CsvValidationException | IOException | DocumentException e) {
+                System.err.println(e.getMessage());
+                return ResponseEntity.status(500).build();
+            }
+            File file = new File("D:\\REPARTITIE\\repartizare.pdf");
             if (file.exists()) {
-
-                MediaType mediaType = MediaType.APPLICATION_OCTET_STREAM;
-
+                MediaType mediaType = MediaType.APPLICATION_PDF;
                 HttpHeaders headers = new HttpHeaders();
-                headers.setContentDispositionFormData("attachment", "lista-repartitie.csv");
-
+                headers.setContentDispositionFormData("attachment", "repartizare.pdf");
                 FileSystemResource resource = new FileSystemResource(file);
-
-                return ResponseEntity.ok()
-                        .headers(headers)
-                        .contentType(mediaType)
-                        .body(resource);
+                return ResponseEntity.ok().headers(headers).contentType(mediaType).body(resource);
             } else {
                 return ResponseEntity.notFound().build();
             }

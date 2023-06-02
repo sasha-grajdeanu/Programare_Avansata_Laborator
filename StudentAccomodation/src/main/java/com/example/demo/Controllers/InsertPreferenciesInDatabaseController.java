@@ -1,6 +1,7 @@
 package com.example.demo.Controllers;
 
-import com.example.demo.JDBCProceduresAndFunction.*;
+import com.example.demo.JDBCProceduresAndFunction.AlgoritmDeRepartizare;
+import com.example.demo.JDBCProceduresAndFunction.InsertInCSVPreferencies;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -14,39 +15,24 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.StandardCopyOption;
-import java.sql.SQLException;
 
 @RestController
-public class PreferincesControler {
+public class InsertPreferenciesInDatabaseController {
 
-    private InsertInCSVPreferencies insertInCSVPreferencies;
-    private AlgoritmDeRepartizare algoritmDeRepartizare;
-
-    private ListOfCamine listOfCamine;
-    private ListOfStudent listOfStudent;
-    private PreferenciesOfStudent preferenciesOfStudent;
+    private final InsertInCSVPreferencies insertInCSVPreferencies;
 
     @Autowired
-    public PreferincesControler(InsertInCSVPreferencies insert, AlgoritmDeRepartizare algoritmDeRepartizare, ListOfCamine listOfCamine, ListOfStudent listOfStudent, PreferenciesOfStudent preferenciesOfStudent) {
+    public InsertPreferenciesInDatabaseController(InsertInCSVPreferencies insert) {
         this.insertInCSVPreferencies = insert;
-        this.listOfCamine=listOfCamine;
-        this.listOfStudent=listOfStudent;
-        this.preferenciesOfStudent=preferenciesOfStudent;
-        this.algoritmDeRepartizare = algoritmDeRepartizare;
-
     }
-
-    @PostMapping("/preferinte")
-    public ResponseEntity<String> uploadPreferinte(@RequestParam("file") MultipartFile file) {
+    @PostMapping("/preferencies")
+    public ResponseEntity<String> uploadPreferncies(@RequestParam("file") MultipartFile file) {
         try {
             String pathStocare = "D:/REPARTITIE";
             String nameOfFile = file.getContentType();
-            System.out.println(nameOfFile);
             String extension = nameOfFile.split("/")[1];
             if (extension.equals("csv")) {
                 String fileName = "preferinte." + extension;
-                System.out.println(fileName);
-                // Save the file to the upload path
                 Path filePath = Path.of(pathStocare + File.separator + fileName);
                 Files.copy(file.getInputStream(), filePath, StandardCopyOption.REPLACE_EXISTING);
                 boolean success = this.insertInCSVPreferencies.callInsertPreferencies();
@@ -64,10 +50,5 @@ public class PreferincesControler {
         }
     }
 
-    @PostMapping("/repartitii")
-    public ResponseEntity<String> repartitie() throws SQLException {
 
-        algoritmDeRepartizare.repartitie();
-        return ResponseEntity.ok("INCARCAT CU SUCCES");
-    }
 }
