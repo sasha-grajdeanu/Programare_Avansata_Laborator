@@ -87,7 +87,9 @@ public class AlgoritmDeRepartizare {
     }
 
     public void sortare() throws SQLException {
-        this.reset();
+        if(this.students != null){
+            this.reset();
+        }
         this.students = listOfStudent.studentiInscrisi();
         this.campus = listOfCamine.camineDate();
         this.preferencies = preferenciesOfStudent.preferinteleStudentilor();
@@ -183,7 +185,9 @@ public class AlgoritmDeRepartizare {
             System.err.println(e.getMessage());
             return false;
         }
+        System.out.println("inceput");
         impartireLocuri();
+        System.out.println("inceput2");
         completeRoom(studentiAnIntaiM, locuri1M, locuriAnIntaiM);
         completeRoom(studentiAnDoiM, locuri2M, locuriAnDoiM);
         completeRoom(studentiAnTreiM, locuri3M, locuriAnTreiM);
@@ -216,15 +220,20 @@ public class AlgoritmDeRepartizare {
 
     private void completeRoom(List<Student> studentiAn, int locuri, Map<Integer, Integer> locuriDate) {
         for (Student student1 : studentiAn) {
+            System.out.println("hajde");
             if (locuri != 0) {
                 int verificare = locuri;
                 int id_student = student1.getId();
                 for (Map.Entry<Integer, List<Integer>> e : preferencies.entrySet()) {
+                    System.out.println("hajde2");
                     if (e.getKey() == id_student) {
                         for (int i = 0; i < e.getValue().size(); i++) {
+                            System.out.println("hajde3");
                             for (Map.Entry<Integer, Integer> camines : locuriDate.entrySet()) {
-                                if (e.getValue().get(i) == camines.getKey()) {
+                                System.out.println("hajde4");
+                                if (Objects.equals(e.getValue().get(i), camines.getKey())) {
                                     if (camines.getValue() != 0) {
+                                        System.out.println("hajde5");
                                         repartition.put(id_student, camines.getKey());
                                         System.out.println(id_student + " " + camines.getKey());
                                         locuriDate.put(camines.getKey(), camines.getValue() - 1);

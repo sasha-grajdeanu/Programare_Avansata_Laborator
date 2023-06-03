@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>ARSFII</title>
+</head>
+<body>
+<h1>BINE AI VENIT IN A.R.S.F.I.I.</h1>
+<h3>(Automatul de repartizare a studentilor din Facultatea De Informatica din Iasi)</h3>
+
+<form id="campus" method="post" enctype="multipart/form-data" action="/campus">
+    <input type="file" name="file" accept=".csv"/>
+    <button type="submit">Upload</button>
+</form>
+<div id="campusMessage" class="message"></div>
+
+<form id="preferencies" method="post" enctype="multipart/form-data" action="/preferencies">
+    <input type="file" name="file" accept=".csv"/>
+    <button type="submit">Upload</button>
+</form>
+<div id="preferenciesMessage" class="message"></div>
+
+<form id="repartitions" method="post" action="/repartitions">
+    <button type="submit">Repartition Students</button>
+</form>
+<div id="repartitionsMessage" class="message"></div>
+
+<form id="listsForm" method="get" action="/lists">
+    <button type="submit">Get the list</button>
+</form>
+
+<script>
+    // Prevent the default form submission behavior and handle it using AJAX
+    document.addEventListener('DOMContentLoaded', function() {
+        var forms = document.querySelectorAll('form');
+
+        forms.forEach(function(form) {
+            form.addEventListener('submit', function(event) {
+                event.preventDefault(); // Prevent the default form submission
+
+                var formData = new FormData(form);
+                var messageDiv = document.getElementById(form.id + 'Message'); // Get the message div based on form id
+
+                if (form.id !== 'listsForm') {
+                    fetch(form.action, {
+                        method: form.method,
+                        body: formData
+                    })
+                        .then(function(response) {
+                            // Handle the response if needed
+                            console.log('Form submitted successfully');
+                            return response.json(); // Parse the JSON response
+                        })
+                        .then(function(data) {
+                            // Use the JSON data to display the message
+                            messageDiv.textContent = data.message; // Set the message
+                            messageDiv.classList.remove('error'); // Remove the 'error' class if present
+                            messageDiv.classList.add('success'); // Add the 'success' class
+                            messageDiv.style.display = 'block'; // Show the message div
+                        })
+                        .catch(function(error) {
+                            // Handle the error if needed
+                            console.error('An error occurred during form submission');
+                            messageDiv.textContent = 'An error occurred during form submission'; // Set the error message
+                            messageDiv.classList.remove('success'); // Remove the 'success' class if present
+                            messageDiv.classList.add('error'); // Add the 'error' class
+                            messageDiv.style.display = 'block'; // Show the message div
+                        });
+                } else {
+                    // Allow the redirect for the last form
+                    form.submit();
+                }
+            });
+        });
+    });
+</script>
+
+<style>
+    .message {
+        margin-top: 10px;
+        color: green; /* Change the color as per your preference */
+        font-weight: bold;
+        display: none; /* Hide the message div by default */
+    }
+
+    .error {
+        color: red; /* Change the color as per your preference */
+    }
+
+    .success {
+        color: green; /* Change the color as per your preference */
+    }
+</style>
+
+</body>
+</html>
