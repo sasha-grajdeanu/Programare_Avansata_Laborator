@@ -4,29 +4,67 @@
     <title>ARSFII</title>
 </head>
 <body>
-<h1>BINE AI VENIT IN A.R.S.F.I.I.</h1>
-<h3>(Automatul de repartizare a studentilor din Facultatea De Informatica din Iasi)</h3>
+<div class="title">
+    <h1>BINE AI VENIT IN A.R.S.F.I.I.</h1>
+    <h3>(Automatul de repartizare a studentilor din Facultatea De Informatica din Iasi)</h3>
+</div>
+<div class="main">
+    <div>
+        <h2>Incarcare CSV cu locurile din campus</h2>
+        <form id="campus" method="post" enctype="multipart/form-data" action="/campus">
+            <input type="file" name="file" accept=".csv"/>
+            <button type="submit">Incarca</button>
+        </form>
+        <div id="campusMessage" class="message"></div>
+    </div>
 
-<form id="campus" method="post" enctype="multipart/form-data" action="/campus">
-    <input type="file" name="file" accept=".csv"/>
-    <button type="submit">Upload</button>
-</form>
-<div id="campusMessage" class="message"></div>
+    <div>
+        <h2>Incarcare CSV cu preferintele studentilor</h2>
+        <form id="preferencies" method="post" enctype="multipart/form-data" action="/preferencies">
+            <input type="file" name="file" accept=".csv"/>
+            <button type="submit">Incarca</button>
+        </form>
+        <div id="preferenciesMessage" class="message"></div>
+    </div>
 
-<form id="preferencies" method="post" enctype="multipart/form-data" action="/preferencies">
-    <input type="file" name="file" accept=".csv"/>
-    <button type="submit">Upload</button>
-</form>
-<div id="preferenciesMessage" class="message"></div>
+    <div>
+        <h2>Repartizare studenti</h2>
+        <form id="repartitions" method="post" action="/repartitions">
+            <button type="submit">Repartizare studenti</button>
+        </form>
+        <div id="repartitionsMessage" class="message"></div>
+    </div>
 
-<form id="repartitions" method="post" action="/repartitions">
-    <button type="submit">Repartition Students</button>
-</form>
-<div id="repartitionsMessage" class="message"></div>
+    <div>
+        <h2>Lista cu studentii repartizati</h2>
+        <form id="listsForm" method="get" action="/lists">
+            <button type="submit">Exportare PDF</button>
+        </form>
+    </div>
+</div>
 
-<form id="listsForm" method="get" action="/lists">
-    <button type="submit">Get the list</button>
-</form>
+<style>
+    body{
+        background-color: rgba(2,0,4,0.84);
+        color: cornsilk;
+    }
+    .main{
+        display: flex;
+        flex-direction: column;
+        padding: 15px;
+        font-family: "JetBrains Mono" ,monospace;
+    }
+    .message {
+        margin: 10px;
+        font-weight: bold;
+        display: none;
+    }
+
+    .title{
+        font-family: "JetBrains Mono" ,monospace;
+        align-items: center;
+    }
+</style>
 
 <script>
     // Prevent the default form submission behavior and handle it using AJAX
@@ -73,23 +111,6 @@
         });
     });
 </script>
-
-<style>
-    .message {
-        margin-top: 10px;
-        color: green; /* Change the color as per your preference */
-        font-weight: bold;
-        display: none; /* Hide the message div by default */
-    }
-
-    .error {
-        color: red; /* Change the color as per your preference */
-    }
-
-    .success {
-        color: green; /* Change the color as per your preference */
-    }
-</style>
 
 </body>
 </html>
