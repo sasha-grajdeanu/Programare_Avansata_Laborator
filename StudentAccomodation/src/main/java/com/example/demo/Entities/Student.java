@@ -1,6 +1,9 @@
 package com.example.demo.Entities;
 import lombok.Data;
 
+/**
+ * class: an oop representation of a student
+ */
 @Data
 public class Student {
     private int id;

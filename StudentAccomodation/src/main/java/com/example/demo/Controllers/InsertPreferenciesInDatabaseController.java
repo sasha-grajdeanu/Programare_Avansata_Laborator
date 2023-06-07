@@ -19,6 +19,9 @@ import java.nio.file.StandardCopyOption;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * this controller is responsible with inserting in database of the student's preferences
+ */
 @RestController
 public class InsertPreferenciesInDatabaseController {
 

@@ -17,6 +17,9 @@ public class CreateList {
         this.dataSource = dataSource;
     }
 
+    /**
+     * method: generate a csv file using a plsql procedure
+     */
     public boolean callLista() {
         try (Connection connection = dataSource.getConnection()) {
             CallableStatement statement = connection.prepareCall("{call lista_repartizare()}");

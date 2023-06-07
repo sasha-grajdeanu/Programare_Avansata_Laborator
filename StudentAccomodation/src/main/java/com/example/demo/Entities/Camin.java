@@ -2,6 +2,9 @@ package com.example.demo.Entities;
 
 import lombok.Data;
 
+/**
+ * class: an oop representation of the campus
+ */
 @Data
 public class Camin {
     private int id;

@@ -15,6 +15,9 @@ import org.springframework.web.bind.annotation.RestController;
 import java.io.File;
 import java.io.IOException;
 
+/**
+ * this controller is responsible with getting the result of repartition in pdf format
+ */
 @RestController
 public class GetListController {
 

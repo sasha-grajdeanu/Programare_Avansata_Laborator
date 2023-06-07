@@ -21,6 +21,9 @@ public class ListOfCamine {
         this.dataSource = dataSource;
     }
 
+    /**
+     * method: return the list with the campus
+     */
     public List<Camin> camineDate() throws SQLException {
         List<Camin> camine = new ArrayList<>();
 

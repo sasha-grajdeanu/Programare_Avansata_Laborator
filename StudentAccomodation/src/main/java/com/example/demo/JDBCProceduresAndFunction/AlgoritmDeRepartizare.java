@@ -86,6 +86,10 @@ public class AlgoritmDeRepartizare {
         preferencies.clear();
     }
 
+    /**
+     * method: responsible with the sorting of students after gender, study year and the grades
+     * @throws SQLException
+     */
     public void sortare() throws SQLException {
         if(this.students != null){
             this.reset();
@@ -129,6 +133,9 @@ public class AlgoritmDeRepartizare {
         }
     }
 
+    /**
+     * method: responsible with the redistribution of campus capacity for each student category
+     */
     public void impartireLocuri() {
         int studentiM = this.studentiAnTreiM.size() + this.studentiAnIntaiM.size() + this.studentiAnDoiM.size();
         System.out.println("nrs" + studentiM);
@@ -178,6 +185,9 @@ public class AlgoritmDeRepartizare {
         }
     }
 
+    /**
+     * method: responsible with the repartition of the all student
+     */
     public boolean repartitie(){
         try {
             sortare();
@@ -203,6 +213,11 @@ public class AlgoritmDeRepartizare {
         return true;
     }
 
+    /**
+     * method: responsible with the inserting in database of repartition
+     *
+     * @throws SQLException
+     */
     private void insertInDatabase() throws SQLException {
         Connection connection = dataSource.getConnection();
         PreparedStatement deleteStatement = connection.prepareStatement("DELETE FROM REPARTIZARE");
@@ -218,6 +233,13 @@ public class AlgoritmDeRepartizare {
         connection.close();
     }
 
+    /**
+     * method: for the repartition of a specified category of student
+     *
+     * @param studentiAn
+     * @param locuri
+     * @param locuriDate
+     */
     private void completeRoom(List<Student> studentiAn, int locuri, Map<Integer, Integer> locuriDate) {
         for (Student student1 : studentiAn) {
             System.out.println("hajde");

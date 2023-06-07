@@ -18,6 +18,9 @@ import java.nio.file.StandardCopyOption;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * this controller is responsible with inserting in the database of campus and their capacity
+ */
 @RestController
 public class InsertCampusInDatabaseController {
     private InsertInCSVLocuri insertInCSVLocuri;

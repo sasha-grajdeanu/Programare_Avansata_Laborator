@@ -14,6 +14,9 @@ import java.io.FileReader;
 import java.io.IOException;
 
 public class CsvToPdf {
+    /**
+     * method: generate a pdf with the repartition of students
+     */
     public void convert(String name) throws CsvValidationException, IOException, DocumentException {
         CSVReader reader = new CSVReader(new FileReader(name));
         String[] line;

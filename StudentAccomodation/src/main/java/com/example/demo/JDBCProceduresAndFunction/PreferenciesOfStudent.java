@@ -25,6 +25,9 @@ public class PreferenciesOfStudent {
         this.dataSource = dataSource;
     }
 
+    /**
+     * method: return the list with the preferencies of students
+     */
     public Map<Integer, List<Integer>> preferinteleStudentilor() throws SQLException {
         Map<Integer, List<Integer>> mapare = new HashMap<>();
 

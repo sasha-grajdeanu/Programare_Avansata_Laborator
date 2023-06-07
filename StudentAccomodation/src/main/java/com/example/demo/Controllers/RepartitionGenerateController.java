@@ -12,6 +12,9 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * this controller is responsible with calling the method which make the repartition
+ */
 @RestController
 public class RepartitionGenerateController {
 

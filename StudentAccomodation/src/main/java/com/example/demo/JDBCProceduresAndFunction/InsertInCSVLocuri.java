@@ -17,6 +17,9 @@ public class InsertInCSVLocuri {
         this.dataSource = dataSource;
     }
 
+    /**
+     * method: call a plsql procedure which insert in database the campus
+     */
     public boolean callInsertInCamine() {
         try (Connection connection = dataSource.getConnection()) {
             System.out.println("intrat");

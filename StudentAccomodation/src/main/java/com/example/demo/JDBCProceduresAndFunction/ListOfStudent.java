@@ -21,6 +21,9 @@ public class ListOfStudent {
         this.dataSource = dataSource;
     }
 
+    /**
+     * method: return the list with the students
+     */
     public List<Student> studentiInscrisi() throws SQLException {
         List<Student> students = new ArrayList<>();
 

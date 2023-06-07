@@ -16,6 +16,9 @@ public class InsertInCSVPreferencies {
         this.dataSource = dataSource;
     }
 
+    /**
+     * method: call a plsql procedure which insert in database the preferences
+     */
     public boolean callInsertPreferencies(){
         try(Connection connection = dataSource.getConnection()){
             CallableStatement statement  = connection.prepareCall("{call insert_preferinte()}");
