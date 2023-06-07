@@ -69,16 +69,15 @@
 </style>
 
 <script>
-    // Prevent the default form submission behavior and handle it using AJAX
     document.addEventListener('DOMContentLoaded', function() {
         var forms = document.querySelectorAll('form');
 
         forms.forEach(function(form) {
             form.addEventListener('submit', function(event) {
-                event.preventDefault(); // Prevent the default form submission
+                event.preventDefault();
 
                 var formData = new FormData(form);
-                var messageDiv = document.getElementById(form.id + 'Message'); // Get the message div based on form id
+                var messageDiv = document.getElementById(form.id + 'Message');
 
                 if (form.id !== 'listsForm') {
                     fetch(form.action, {
@@ -86,27 +85,17 @@
                         body: formData
                     })
                         .then(function(response) {
-                            // Handle the response if needed
-                            console.log('Form submitted successfully');
-                            return response.json(); // Parse the JSON response
+                            return response.json();
                         })
                         .then(function(data) {
-                            // Use the JSON data to display the message
-                            messageDiv.textContent = data.message; // Set the message
-                            messageDiv.classList.remove('error'); // Remove the 'error' class if present
-                            messageDiv.classList.add('success'); // Add the 'success' class
-                            messageDiv.style.display = 'block'; // Show the message div
+                            messageDiv.textContent = data.message;
+                            messageDiv.style.display = 'block';
                         })
                         .catch(function(error) {
-                            // Handle the error if needed
-                            console.error('An error occurred during form submission');
-                            messageDiv.textContent = 'An error occurred during form submission'; // Set the error message
-                            messageDiv.classList.remove('success'); // Remove the 'success' class if present
-                            messageDiv.classList.add('error'); // Add the 'error' class
-                            messageDiv.style.display = 'block'; // Show the message div
+                            messageDiv.textContent = 'EROARE';
+                            messageDiv.style.display = 'block';
                         });
                 } else {
-                    // Allow the redirect for the last form
                     form.submit();
                 }
             });
